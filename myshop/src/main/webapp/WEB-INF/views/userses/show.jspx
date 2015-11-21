@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myshop_domain_Users" object="${users}" path="/userses" z="Lk9zFd62I9LUKcx1SH67a7J/osc=">
+        <field:display field="emailAddress" id="s_com_myshop_domain_Users_emailAddress" object="${users}" z="4tNYgr1er0uOn9VkNHXMMhtJORs="/>
+        <field:display field="firstName" id="s_com_myshop_domain_Users_firstName" object="${users}" z="VYFe/83WiEQYfniYKzUpEhbNCBI="/>
+        <field:display field="lastName" id="s_com_myshop_domain_Users_lastName" object="${users}" z="jauw6euYmHxnxp4zNQ0uGO2t+zE="/>
+        <field:display field="mobile" id="s_com_myshop_domain_Users_mobile" object="${users}" z="zshUERFGxfpxlNL6A3EfmC4DM/I="/>
+        <field:display field="phone" id="s_com_myshop_domain_Users_phone" object="${users}" z="qJ6a2V/DrylDt0Gv7vNbJXnJCnI="/>
+        <field:display date="true" dateTimePattern="${users_dob_date_format}" field="dob" id="s_com_myshop_domain_Users_dob" object="${users}" z="gGlz7dF7udjNCYEbAdPsd0NmOaE="/>
+        <field:display field="note" id="s_com_myshop_domain_Users_note" object="${users}" z="pXr4q3nGKhNyQN+yF9OgcGp3pis="/>
+        <field:display field="enable" id="s_com_myshop_domain_Users_enable" object="${users}" z="67QAPZEzvU/f6Q4XkoPAyaC/OpU="/>
+        <field:display field="isOwner" id="s_com_myshop_domain_Users_isOwner" object="${users}" z="8PosYB5rfzPgSIXRe8cXcX4HCFI="/>
+        <field:display field="jobTitle" id="s_com_myshop_domain_Users_jobTitle" object="${users}" z="9L+A4V69JmXXKDBrC9ahPzDMNb0="/>
+    </page:show>
+</div>

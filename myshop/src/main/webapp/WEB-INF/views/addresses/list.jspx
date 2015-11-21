@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_Address" items="${addresses}" z="KUxQNMLfY5SdMsNTTeY46quijG4=">
+        <table:table data="${addresses}" id="l_com_myshop_domain_Address" path="/addresses" z="YXtMg6zTvczSL9Nl8WquY17BX00=">
+            <table:column id="c_com_myshop_domain_Address_addressType" property="addressType" z="G6ml95XB5yRkKyT0ODeaKmSPGZI="/>
+            <table:column id="c_com_myshop_domain_Address_addressLine1" property="addressLine1" z="0kk4FxHTesnDAkKofvlTn102FTY="/>
+            <table:column id="c_com_myshop_domain_Address_addressLine2" property="addressLine2" z="quqdMjt6vQr7Liw0AShNdfSDRes="/>
+            <table:column id="c_com_myshop_domain_Address_city" property="city" z="agyc1UmjAjzjiwNGVUl1gxnj5uE="/>
+            <table:column id="c_com_myshop_domain_Address_stateName" property="stateName" z="14Rdei+0gIKKaJBMbc0LqUbkg8M="/>
+            <table:column id="c_com_myshop_domain_Address_countryName" property="countryName" z="2+DphJb2B4hfdMim2lRGBYH3pJI="/>
+        </table:table>
+    </page:list>
+</div>

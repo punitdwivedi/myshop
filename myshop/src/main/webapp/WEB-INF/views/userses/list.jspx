@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_Users" items="${userses}" z="IEfTXQ+/hZnDwn6RWBTSztZNSvY=">
+        <table:table data="${userses}" id="l_com_myshop_domain_Users" path="/userses" z="CvQPPsg4rTeYY9f0hakQggZN6XA=">
+            <table:column id="c_com_myshop_domain_Users_emailAddress" property="emailAddress" z="vHzUR1ZYSzSbmjACov6dYdB88KM="/>
+            <table:column id="c_com_myshop_domain_Users_firstName" property="firstName" z="GCAK3bMaSBlT2qOsChOrSn1M0i0="/>
+            <table:column id="c_com_myshop_domain_Users_lastName" property="lastName" z="cDnSFpqbekmkp8J+66ekbdPtNm0="/>
+            <table:column id="c_com_myshop_domain_Users_mobile" property="mobile" z="o4KuGhOJT8DIDl6IH8J1YNkJbFE="/>
+            <table:column id="c_com_myshop_domain_Users_phone" property="phone" z="Zj1LAhCROCr4TEG56widLtjAN3M="/>
+            <table:column date="true" dateTimePattern="${users_dob_date_format}" id="c_com_myshop_domain_Users_dob" property="dob" z="79iZIw5d3lfzXqSFrPJG4h9aV8M="/>
+        </table:table>
+    </page:list>
+</div>
