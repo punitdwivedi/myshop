@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_CustomerPoDetails" items="${customerpodetailses}" z="eLoUpHN0pfB/MAeqv5CatjQ2hUY=">
+        <table:table data="${customerpodetailses}" id="l_com_myshop_domain_CustomerPoDetails" path="/customerpodetailses" z="3sTOdR+TJUVeoAtnLffAivZLkQw=">
+            <table:column id="c_com_myshop_domain_CustomerPoDetails_customerPoId" property="customerPoId" z="+LCLbRFn9NrR/39ryC1JCq0bkHY="/>
+            <table:column id="c_com_myshop_domain_CustomerPoDetails_productId" property="productId" z="rPSmqK/ReLgQROUz+EDdOcIxTi0="/>
+            <table:column id="c_com_myshop_domain_CustomerPoDetails_qty" property="qty" z="Sxd02Y7GTXHpK6Uw8n3F/rB5Z4k="/>
+            <table:column id="c_com_myshop_domain_CustomerPoDetails_unit" property="unit" z="SOYi1IHygC4tHAu5XrSNYYGqP7Q="/>
+            <table:column id="c_com_myshop_domain_CustomerPoDetails_unitPrice" property="unitPrice" z="pNPKeXuGJJmIwsGXZv8SPFE+oLo="/>
+            <table:column date="true" dateTimePattern="${customerPoDetails_desireddeliverydate_date_format}" id="c_com_myshop_domain_CustomerPoDetails_desiredDeliveryDate" property="desiredDeliveryDate" z="TrjYxvtltWtHRpX6rkhJp6nYLJI="/>
+        </table:table>
+    </page:list>
+</div>

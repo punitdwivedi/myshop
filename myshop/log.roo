@@ -149,3 +149,21 @@ field string --fieldName vendorPartName
 web mvc all --package ~.web
 // Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2015-11-22 14:05:43
 // Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-11-22 14:12:03
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2015-11-22 14:15:35
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-11-22 14:58:51
+entity jpa --class ~.domain.CustomerPO --testAutomatically 
+field reference --fieldName shippingAddressId --type ~.domain.Address
+field boolean --fieldName orderIsOpen
+field string --fieldName note
+web mvc all --package com.myshop.web
+web mvc all --package ~.web
+entity jpa --class ~.domain.CustomerPoDetails --testAutomatically 
+field reference --fieldName customerPoId --type ~.domain.CustomerPO
+field reference --fieldName productId --type ~.domain.Product
+field number --fieldName qty --type java.lang.Double
+field string --fieldName unit
+field number --fieldName unitPrice --type java.lang.Double
+field date --fieldName desiredDeliveryDate --type java.util.Date
+field date --fieldName confirmedDeliveryDate --type java.util.Date
+field string --fieldName orderStatus
+web mvc all --package com.myshop.web

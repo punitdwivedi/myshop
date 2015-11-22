@@ -8,6 +8,8 @@ import com.myshop.domain.AddressType;
 import com.myshop.domain.Customer;
 import com.myshop.domain.CustomerAddress;
 import com.myshop.domain.CustomerContact;
+import com.myshop.domain.CustomerPO;
+import com.myshop.domain.CustomerPoDetails;
 import com.myshop.domain.PaymentTerm;
 import com.myshop.domain.Product;
 import com.myshop.domain.ProductCategory;
@@ -138,6 +140,54 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.CustomerContact>() {
             public com.myshop.domain.CustomerContact convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), CustomerContact.class);
+            }
+        };
+    }
+    
+    public Converter<CustomerPO, String> ApplicationConversionServiceFactoryBean.getCustomerPOToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.CustomerPO, java.lang.String>() {
+            public String convert(CustomerPO customerPO) {
+                return new StringBuilder().append(customerPO.getNote()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, CustomerPO> ApplicationConversionServiceFactoryBean.getIdToCustomerPOConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.CustomerPO>() {
+            public com.myshop.domain.CustomerPO convert(java.lang.Long id) {
+                return CustomerPO.findCustomerPO(id);
+            }
+        };
+    }
+    
+    public Converter<String, CustomerPO> ApplicationConversionServiceFactoryBean.getStringToCustomerPOConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.CustomerPO>() {
+            public com.myshop.domain.CustomerPO convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), CustomerPO.class);
+            }
+        };
+    }
+    
+    public Converter<CustomerPoDetails, String> ApplicationConversionServiceFactoryBean.getCustomerPoDetailsToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.CustomerPoDetails, java.lang.String>() {
+            public String convert(CustomerPoDetails customerPoDetails) {
+                return new StringBuilder().append(customerPoDetails.getQty()).append(' ').append(customerPoDetails.getUnit()).append(' ').append(customerPoDetails.getUnitPrice()).append(' ').append(customerPoDetails.getDesiredDeliveryDate()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, CustomerPoDetails> ApplicationConversionServiceFactoryBean.getIdToCustomerPoDetailsConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.CustomerPoDetails>() {
+            public com.myshop.domain.CustomerPoDetails convert(java.lang.Long id) {
+                return CustomerPoDetails.findCustomerPoDetails(id);
+            }
+        };
+    }
+    
+    public Converter<String, CustomerPoDetails> ApplicationConversionServiceFactoryBean.getStringToCustomerPoDetailsConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.CustomerPoDetails>() {
+            public com.myshop.domain.CustomerPoDetails convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), CustomerPoDetails.class);
             }
         };
     }
@@ -278,6 +328,12 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getCustomerContactToStringConverter());
         registry.addConverter(getIdToCustomerContactConverter());
         registry.addConverter(getStringToCustomerContactConverter());
+        registry.addConverter(getCustomerPOToStringConverter());
+        registry.addConverter(getIdToCustomerPOConverter());
+        registry.addConverter(getStringToCustomerPOConverter());
+        registry.addConverter(getCustomerPoDetailsToStringConverter());
+        registry.addConverter(getIdToCustomerPoDetailsConverter());
+        registry.addConverter(getStringToCustomerPoDetailsConverter());
         registry.addConverter(getPaymentTermToStringConverter());
         registry.addConverter(getIdToPaymentTermConverter());
         registry.addConverter(getStringToPaymentTermConverter());

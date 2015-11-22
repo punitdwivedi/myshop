@@ -46,5 +46,13 @@
             <menu:item id="i_product_new" messageCode="global_menu_new" url="/products?form" z="Ezf8cTW61d2RkMNEcYkDJpG01kc="/>
             <menu:item id="i_product_list" messageCode="global_menu_list" url="/products?page=1&amp;size=${empty param.size ? 10 : param.size}" z="kEeyCmUUYXShbDEWwOLheaAkM50="/>
         </menu:category>
+        <menu:category id="c_customerpo" z="9evoRWEnyk9+CiYXNkhMynZ8hcg=">
+            <menu:item id="i_customerpo_new" messageCode="global_menu_new" url="/custoes?form" z="fDrqKVyADY8sL0XEX7a0CxcYhoE="/>
+            <menu:item id="i_customerpo_list" messageCode="global_menu_list" url="/custoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="lwnryScUW04Ym9YB5BQXQgUG31E="/>
+        </menu:category>
+        <menu:category id="c_customerpodetails" z="rMld6k6ZtkYu9YzCp2jRp7uDpgM=">
+            <menu:item id="i_customerpodetails_new" messageCode="global_menu_new" url="/customerpodetailses?form" z="5NN4UxBmFRO6WSw6haMczBjU5XY="/>
+            <menu:item id="i_customerpodetails_list" messageCode="global_menu_list" url="/customerpodetailses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="37K6x7e+zNKvvHBttupTZkMYqgE="/>
+        </menu:category>
     </menu:menu>
 </div>
