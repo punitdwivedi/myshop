@@ -169,7 +169,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Product, String> ApplicationConversionServiceFactoryBean.getProductToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.myshop.domain.Product, java.lang.String>() {
             public String convert(Product product) {
-                return "(no displayable fields)";
+                return new StringBuilder().append(product.getProductName()).append(' ').append(product.getProductType()).append(' ').append(product.getCustomerPartNo()).append(' ').append(product.getCustomerPartName()).toString();
             }
         };
     }

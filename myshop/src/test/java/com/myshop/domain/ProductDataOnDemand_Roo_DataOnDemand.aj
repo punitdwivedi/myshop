@@ -3,7 +3,9 @@
 
 package com.myshop.domain;
 
+import com.myshop.domain.Customer;
 import com.myshop.domain.Product;
+import com.myshop.domain.ProductCategoryDataOnDemand;
 import com.myshop.domain.ProductDataOnDemand;
 import com.myshop.domain.VendorDataOnDemand;
 import java.security.SecureRandom;
@@ -25,11 +27,110 @@ privileged aspect ProductDataOnDemand_Roo_DataOnDemand {
     private List<Product> ProductDataOnDemand.data;
     
     @Autowired
+    ProductCategoryDataOnDemand ProductDataOnDemand.productCategoryDataOnDemand;
+    
+    @Autowired
     VendorDataOnDemand ProductDataOnDemand.vendorDataOnDemand;
     
     public Product ProductDataOnDemand.getNewTransientProduct(int index) {
         Product obj = new Product();
+        setCustomerId(obj, index);
+        setCustomerPartName(obj, index);
+        setCustomerPartNo(obj, index);
+        setHeight(obj, index);
+        setIsEnabled(obj, index);
+        setLength(obj, index);
+        setProductImage(obj, index);
+        setProductName(obj, index);
+        setProductType(obj, index);
+        setSpecification(obj, index);
+        setUnit(obj, index);
+        setVendorPartName(obj, index);
+        setVendorPartNo(obj, index);
+        setWeight(obj, index);
+        setWeightUnit(obj, index);
+        setWidth(obj, index);
         return obj;
+    }
+    
+    public void ProductDataOnDemand.setCustomerId(Product obj, int index) {
+        Customer customerId = null;
+        obj.setCustomerId(customerId);
+    }
+    
+    public void ProductDataOnDemand.setCustomerPartName(Product obj, int index) {
+        String customerPartName = "customerPartName_" + index;
+        obj.setCustomerPartName(customerPartName);
+    }
+    
+    public void ProductDataOnDemand.setCustomerPartNo(Product obj, int index) {
+        String customerPartNo = "customerPartNo_" + index;
+        obj.setCustomerPartNo(customerPartNo);
+    }
+    
+    public void ProductDataOnDemand.setHeight(Product obj, int index) {
+        Double height = new Integer(index).doubleValue();
+        obj.setHeight(height);
+    }
+    
+    public void ProductDataOnDemand.setIsEnabled(Product obj, int index) {
+        Boolean isEnabled = Boolean.TRUE;
+        obj.setIsEnabled(isEnabled);
+    }
+    
+    public void ProductDataOnDemand.setLength(Product obj, int index) {
+        Double length = new Integer(index).doubleValue();
+        obj.setLength(length);
+    }
+    
+    public void ProductDataOnDemand.setProductImage(Product obj, int index) {
+        String productImage = "productImage_" + index;
+        obj.setProductImage(productImage);
+    }
+    
+    public void ProductDataOnDemand.setProductName(Product obj, int index) {
+        String productName = "productName_" + index;
+        obj.setProductName(productName);
+    }
+    
+    public void ProductDataOnDemand.setProductType(Product obj, int index) {
+        String productType = "productType_" + index;
+        obj.setProductType(productType);
+    }
+    
+    public void ProductDataOnDemand.setSpecification(Product obj, int index) {
+        String specification = "specification_" + index;
+        obj.setSpecification(specification);
+    }
+    
+    public void ProductDataOnDemand.setUnit(Product obj, int index) {
+        String unit = "unit_" + index;
+        obj.setUnit(unit);
+    }
+    
+    public void ProductDataOnDemand.setVendorPartName(Product obj, int index) {
+        String vendorPartName = "vendorPartName_" + index;
+        obj.setVendorPartName(vendorPartName);
+    }
+    
+    public void ProductDataOnDemand.setVendorPartNo(Product obj, int index) {
+        String vendorPartNo = "vendorPartNo_" + index;
+        obj.setVendorPartNo(vendorPartNo);
+    }
+    
+    public void ProductDataOnDemand.setWeight(Product obj, int index) {
+        Double weight = new Integer(index).doubleValue();
+        obj.setWeight(weight);
+    }
+    
+    public void ProductDataOnDemand.setWeightUnit(Product obj, int index) {
+        String weightUnit = "weightUnit_" + index;
+        obj.setWeightUnit(weightUnit);
+    }
+    
+    public void ProductDataOnDemand.setWidth(Product obj, int index) {
+        Double width = new Integer(index).doubleValue();
+        obj.setWidth(width);
     }
     
     public Product ProductDataOnDemand.getSpecificProduct(int index) {

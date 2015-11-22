@@ -3,7 +3,9 @@
 
 package com.myshop.web;
 
+import com.myshop.domain.Customer;
 import com.myshop.domain.Product;
+import com.myshop.domain.ProductCategory;
 import com.myshop.domain.Vendor;
 import com.myshop.web.ProductController;
 import java.io.UnsupportedEncodingException;
@@ -87,6 +89,8 @@ privileged aspect ProductController_Roo_Controller {
     
     void ProductController.populateEditForm(Model uiModel, Product product) {
         uiModel.addAttribute("product", product);
+        uiModel.addAttribute("customers", Customer.findAllCustomers());
+        uiModel.addAttribute("productcategorys", ProductCategory.findAllProductCategorys());
         uiModel.addAttribute("vendors", Vendor.findAllVendors());
     }
     

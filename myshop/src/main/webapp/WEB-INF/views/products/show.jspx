@@ -3,6 +3,23 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_myshop_domain_Product" object="${product}" path="/products" z="iUbDZuycm2J1YXKcGgPqCAq6s28=">
-        <field:display field="vendorId" id="s_com_myshop_domain_Product_vendorId" object="${product}" z="cIaQ6lMzrQSFZe/KMhJqsj1OK9U="/>
+        <field:display field="vendor" id="s_com_myshop_domain_Product_vendor" object="${product}" z="+yLVv1Ccf8X8bY+T0YifzoEG5d4="/>
+        <field:display field="productName" id="s_com_myshop_domain_Product_productName" object="${product}" z="E+VVEtvV3YvLkN15CFNyS1OKf1Y="/>
+        <field:display field="productType" id="s_com_myshop_domain_Product_productType" object="${product}" z="mfKCdTTy1D2Uz7ptawcMA31dpbw="/>
+        <field:display field="isEnabled" id="s_com_myshop_domain_Product_isEnabled" object="${product}" z="1llybUu0OYH3+Q/JJnDNGhyRi8k="/>
+        <field:display field="productCategoryId" id="s_com_myshop_domain_Product_productCategoryId" object="${product}" z="GV6ieq/uCVpN+lPG2msBLIacHKY="/>
+        <field:display field="customerId" id="s_com_myshop_domain_Product_customerId" object="${product}" z="qLsfxW6ArcyuT+lBUVdv2q2xPsI="/>
+        <field:display field="customerPartNo" id="s_com_myshop_domain_Product_customerPartNo" object="${product}" z="BpEnOSxO+2DuS5x+l2kjWnq5lk0="/>
+        <field:display field="customerPartName" id="s_com_myshop_domain_Product_customerPartName" object="${product}" z="vUMs5OVBZ/PaHynMsGXjW7qO1d8="/>
+        <field:display field="unit" id="s_com_myshop_domain_Product_unit" object="${product}" z="0iv2g0BRByerzXGeosfnaVvCJbk="/>
+        <field:display field="length" id="s_com_myshop_domain_Product_length" object="${product}" z="cszJe55PvI5eFGKJBVZg7UpUghY="/>
+        <field:display field="width" id="s_com_myshop_domain_Product_width" object="${product}" z="+qq95x5m21wePYAphq7t2MBHIN8="/>
+        <field:display field="height" id="s_com_myshop_domain_Product_height" object="${product}" z="7RgNFKck3u2jMNAfgY+qf988XSI="/>
+        <field:display field="weight" id="s_com_myshop_domain_Product_weight" object="${product}" z="Ig3Fj0q+zGLq7wq90yZ0pC6ETuE="/>
+        <field:display field="weightUnit" id="s_com_myshop_domain_Product_weightUnit" object="${product}" z="oT/s+xrFM7HIx+pdCapdsR/MFv4="/>
+        <field:display field="specification" id="s_com_myshop_domain_Product_specification" object="${product}" z="kRz8CWDS4DvL/KnkM58rpAa8nls="/>
+        <field:display field="productImage" id="s_com_myshop_domain_Product_productImage" object="${product}" z="myzNTANF748hD0hzhSRPiwWLAn4="/>
+        <field:display field="vendorPartNo" id="s_com_myshop_domain_Product_vendorPartNo" object="${product}" z="dRfurcHcP93yH3qSbnBeXhOGf2I="/>
+        <field:display field="vendorPartName" id="s_com_myshop_domain_Product_vendorPartName" object="${product}" z="k1AbEPttU8tyApxrKphgjtgsYyQ="/>
     </page:show>
 </div>

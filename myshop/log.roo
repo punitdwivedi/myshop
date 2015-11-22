@@ -122,3 +122,30 @@ field number --fieldName phone --type int
 entity jpa --class ~.domain.Product
 field reference --fieldName vendorId --type ~.domain.Vendor
 web mvc all --package ~.web
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-11-22 13:30:30
+entity jpa --class ~.domain.Product --testAutomatically 
+field reference --fieldName Vendor --type ~.domain.Vendor --notNull 
+// [failed] field reference --fieldName vendor --type ~.domain.Vendor
+field reference --fieldName vendor --type ~.domain.Vendor
+field string --fieldName productName --notNull 
+field string --fieldName productType --notNull 
+field boolean --fieldName isEnabled
+field reference --fieldName productCategoryId --type ~.domain.ProductCategory
+field reference --fieldName customerId --type ~.domain.Customer
+field string --fieldName customerPartNo 
+field string --fieldName customerPartName
+field string --fieldName unit
+field number --fieldName length --type java.lang.Double
+field number --fieldName width --type java.lang.Double
+field number --fieldName height --type java.lang.Double
+field number --fieldName weight --type java.lang.Double
+hint
+field string --fieldName weightUnit
+field string --fieldName specification
+field string --fieldName productImage
+field reference --fieldName vendorId --type ~.domain.Vendor
+field string --fieldName vendorPartNo 
+field string --fieldName vendorPartName
+web mvc all --package ~.web
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2015-11-22 14:05:43
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-11-22 14:12:03

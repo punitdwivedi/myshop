@@ -14,7 +14,7 @@ privileged aspect Product_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Product.entityManager;
     
-    public static final List<String> Product.fieldNames4OrderClauseFilter = java.util.Arrays.asList("vendorId");
+    public static final List<String> Product.fieldNames4OrderClauseFilter = java.util.Arrays.asList("vendor", "productName", "productType", "isEnabled", "productCategoryId", "customerId", "customerPartNo", "customerPartName", "unit", "length", "width", "height", "weight", "weightUnit", "specification", "productImage", "vendorPartNo", "vendorPartName");
     
     public static final EntityManager Product.entityManager() {
         EntityManager em = new Product().entityManager;
