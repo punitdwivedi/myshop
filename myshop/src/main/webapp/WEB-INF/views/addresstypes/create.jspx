@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_myshop_domain_AddressType" modelAttribute="addressType" path="/addresstypes" render="${empty dependencies}" z="fILyC4WUGjFCYSVB0OfDkmBhmYw=">
-        <field:input field="addressType" id="c_com_myshop_domain_AddressType_addressType" required="true" z="RRw6K2s/BLwNIUaPOr1TjWhtLKs="/>
+        <field:input field="typeName" id="c_com_myshop_domain_AddressType_typeName" required="true" z="8DvyskOMMmg+RqDTbZB5BA2tDLI="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_myshop_domain_AddressType" render="${not empty dependencies}" z="iHGbn2MiEFbmMqyJQJZtZ6ahbXw="/>
 </div>

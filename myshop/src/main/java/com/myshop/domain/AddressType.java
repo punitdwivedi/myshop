@@ -12,5 +12,5 @@ public class AddressType {
     /**
      */
     @NotNull
-    private String addressType;
+    private String typeName;
 }

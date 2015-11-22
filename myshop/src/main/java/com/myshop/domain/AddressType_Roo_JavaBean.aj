@@ -7,12 +7,12 @@ import com.myshop.domain.AddressType;
 
 privileged aspect AddressType_Roo_JavaBean {
     
-    public String AddressType.getAddressType() {
-        return this.addressType;
+    public String AddressType.getTypeName() {
+        return this.typeName;
     }
     
-    public void AddressType.setAddressType(String addressType) {
-        this.addressType = addressType;
+    public void AddressType.setTypeName(String typeName) {
+        this.typeName = typeName;
     }
     
 }

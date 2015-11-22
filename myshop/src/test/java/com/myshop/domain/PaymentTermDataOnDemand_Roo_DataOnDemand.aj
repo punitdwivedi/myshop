@@ -3,8 +3,8 @@
 
 package com.myshop.domain;
 
-import com.myshop.domain.AddressType;
-import com.myshop.domain.AddressTypeDataOnDemand;
+import com.myshop.domain.PaymentTerm;
+import com.myshop.domain.PaymentTermDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -14,26 +14,26 @@ import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import org.springframework.stereotype.Component;
 
-privileged aspect AddressTypeDataOnDemand_Roo_DataOnDemand {
+privileged aspect PaymentTermDataOnDemand_Roo_DataOnDemand {
     
-    declare @type: AddressTypeDataOnDemand: @Component;
+    declare @type: PaymentTermDataOnDemand: @Component;
     
-    private Random AddressTypeDataOnDemand.rnd = new SecureRandom();
+    private Random PaymentTermDataOnDemand.rnd = new SecureRandom();
     
-    private List<AddressType> AddressTypeDataOnDemand.data;
+    private List<PaymentTerm> PaymentTermDataOnDemand.data;
     
-    public AddressType AddressTypeDataOnDemand.getNewTransientAddressType(int index) {
-        AddressType obj = new AddressType();
-        setTypeName(obj, index);
+    public PaymentTerm PaymentTermDataOnDemand.getNewTransientPaymentTerm(int index) {
+        PaymentTerm obj = new PaymentTerm();
+        setTerm(obj, index);
         return obj;
     }
     
-    public void AddressTypeDataOnDemand.setTypeName(AddressType obj, int index) {
-        String typeName = "typeName_" + index;
-        obj.setTypeName(typeName);
+    public void PaymentTermDataOnDemand.setTerm(PaymentTerm obj, int index) {
+        String term = "term_" + index;
+        obj.setTerm(term);
     }
     
-    public AddressType AddressTypeDataOnDemand.getSpecificAddressType(int index) {
+    public PaymentTerm PaymentTermDataOnDemand.getSpecificPaymentTerm(int index) {
         init();
         if (index < 0) {
             index = 0;
@@ -41,36 +41,36 @@ privileged aspect AddressTypeDataOnDemand_Roo_DataOnDemand {
         if (index > (data.size() - 1)) {
             index = data.size() - 1;
         }
-        AddressType obj = data.get(index);
+        PaymentTerm obj = data.get(index);
         Long id = obj.getId();
-        return AddressType.findAddressType(id);
+        return PaymentTerm.findPaymentTerm(id);
     }
     
-    public AddressType AddressTypeDataOnDemand.getRandomAddressType() {
+    public PaymentTerm PaymentTermDataOnDemand.getRandomPaymentTerm() {
         init();
-        AddressType obj = data.get(rnd.nextInt(data.size()));
+        PaymentTerm obj = data.get(rnd.nextInt(data.size()));
         Long id = obj.getId();
-        return AddressType.findAddressType(id);
+        return PaymentTerm.findPaymentTerm(id);
     }
     
-    public boolean AddressTypeDataOnDemand.modifyAddressType(AddressType obj) {
+    public boolean PaymentTermDataOnDemand.modifyPaymentTerm(PaymentTerm obj) {
         return false;
     }
     
-    public void AddressTypeDataOnDemand.init() {
+    public void PaymentTermDataOnDemand.init() {
         int from = 0;
         int to = 10;
-        data = AddressType.findAddressTypeEntries(from, to);
+        data = PaymentTerm.findPaymentTermEntries(from, to);
         if (data == null) {
-            throw new IllegalStateException("Find entries implementation for 'AddressType' illegally returned null");
+            throw new IllegalStateException("Find entries implementation for 'PaymentTerm' illegally returned null");
         }
         if (!data.isEmpty()) {
             return;
         }
         
-        data = new ArrayList<AddressType>();
+        data = new ArrayList<PaymentTerm>();
         for (int i = 0; i < 10; i++) {
-            AddressType obj = getNewTransientAddressType(i);
+            PaymentTerm obj = getNewTransientPaymentTerm(i);
             try {
                 obj.persist();
             } catch (final ConstraintViolationException e) {

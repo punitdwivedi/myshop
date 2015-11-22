@@ -3,6 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_myshop_domain_AddressType" object="${addresstype}" path="/addresstypes" z="sbzQfy4L1pn1UGvhZ+VWNujZWWE=">
-        <field:display field="addressType" id="s_com_myshop_domain_AddressType_addressType" object="${addresstype}" z="WGTaXqbVrzXTox8Cm/DK5THT43s="/>
+        <field:display field="typeName" id="s_com_myshop_domain_AddressType_typeName" object="${addresstype}" z="1a1heDGShwMcNTtg++w+zgXYwKA="/>
     </page:show>
 </div>

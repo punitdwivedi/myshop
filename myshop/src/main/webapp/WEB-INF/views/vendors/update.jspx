@@ -3,8 +3,8 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_com_myshop_domain_Vendor" modelAttribute="vendor" path="/vendors" versionField="Version" z="bU04yrmiHGt9aP45+TVGXOWMgao=">
-        <field:input field="vendorName" id="c_com_myshop_domain_Vendor_vendorName" required="true" z="N4i69YfxMXNJbrvq7WPIRH7amms="/>
         <field:select field="paymentTerm" id="c_com_myshop_domain_Vendor_paymentTerm" itemValue="id" items="${paymentterms}" path="/paymentterms" z="kliiCJsXqRTMgEmWVOdb+slh4xs="/>
-        <field:input field="phone" id="c_com_myshop_domain_Vendor_phone" z="4Hah/Ty0JURiGZU9u5S4hO1Zyk4="/>
+        <field:input field="vendorName" id="c_com_myshop_domain_Vendor_vendorName" required="true" z="N4i69YfxMXNJbrvq7WPIRH7amms="/>
+        <field:input field="phoneNumber" id="c_com_myshop_domain_Vendor_phoneNumber" min="10" required="true" z="s9bp/+RUszz2yG0lb1q1NYcPX28="/>
     </form:update>
 </div>

@@ -3,6 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_com_myshop_domain_PaymentTerm" modelAttribute="paymentTerm" path="/paymentterms" versionField="Version" z="L4qPGLz6RybMWNxvgiAlNvhuses=">
-        <field:input field="paymentTerm" id="c_com_myshop_domain_PaymentTerm_paymentTerm" min="6" required="true" z="a0WwaZsP0wmKnAtTJQTwQGMnif0="/>
+        <field:input field="term" id="c_com_myshop_domain_PaymentTerm_term" required="true" z="G15vqsmCWTWw5GtB4YOHWVJ/1q0="/>
     </form:update>
 </div>

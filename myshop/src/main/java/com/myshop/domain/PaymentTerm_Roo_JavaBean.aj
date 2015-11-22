@@ -7,12 +7,12 @@ import com.myshop.domain.PaymentTerm;
 
 privileged aspect PaymentTerm_Roo_JavaBean {
     
-    public String PaymentTerm.getPaymentTerm() {
-        return this.paymentTerm;
+    public String PaymentTerm.getTerm() {
+        return this.term;
     }
     
-    public void PaymentTerm.setPaymentTerm(String paymentTerm) {
-        this.paymentTerm = paymentTerm;
+    public void PaymentTerm.setTerm(String term) {
+        this.term = term;
     }
     
 }

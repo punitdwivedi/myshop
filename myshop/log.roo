@@ -167,3 +167,11 @@ field date --fieldName desiredDeliveryDate --type java.util.Date
 field date --fieldName confirmedDeliveryDate --type java.util.Date
 field string --fieldName orderStatus
 web mvc all --package com.myshop.web
+entity jpa --class ~.domain.AddressType --testAutomatically
+field string --fieldName typeName --notNull 
+entity jpa --class ~.domain.PaymentTerm --testAutomatically 
+field string --fieldName term --notNull
+entity jpa --class ~.domain.Vendor --testAutomatically 
+field reference --fieldName paymentTerm --type ~.domain.PaymentTerm
+field string --fieldName vendorName --notNull
+field string --fieldName phoneNumber --notNull --sizeMin 10

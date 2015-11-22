@@ -4,7 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_com_myshop_domain_AddressType" items="${addresstypes}" z="xaejtW74PU/t8DHHtowCGtbUrIA=">
         <table:table data="${addresstypes}" id="l_com_myshop_domain_AddressType" path="/addresstypes" z="98FjBGAzKEBc3A2qLWTSZnB2jgU=">
-            <table:column id="c_com_myshop_domain_AddressType_addressType" property="addressType" z="NqAOlxoeuTCF5iQGfUjRUAdGBc0="/>
+            <table:column id="c_com_myshop_domain_AddressType_typeName" property="typeName" z="VCXD18HAKhgjlwViHsfC09+NCac="/>
         </table:table>
     </page:list>
 </div>

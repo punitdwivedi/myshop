@@ -14,7 +14,7 @@ privileged aspect AddressType_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager AddressType.entityManager;
     
-    public static final List<String> AddressType.fieldNames4OrderClauseFilter = java.util.Arrays.asList("addressType");
+    public static final List<String> AddressType.fieldNames4OrderClauseFilter = java.util.Arrays.asList("typeName");
     
     public static final EntityManager AddressType.entityManager() {
         EntityManager em = new AddressType().entityManager;

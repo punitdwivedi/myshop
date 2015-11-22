@@ -8,14 +8,6 @@ import com.myshop.domain.Vendor;
 
 privileged aspect Vendor_Roo_JavaBean {
     
-    public String Vendor.getVendorName() {
-        return this.vendorName;
-    }
-    
-    public void Vendor.setVendorName(String vendorName) {
-        this.vendorName = vendorName;
-    }
-    
     public PaymentTerm Vendor.getPaymentTerm() {
         return this.paymentTerm;
     }
@@ -24,12 +16,20 @@ privileged aspect Vendor_Roo_JavaBean {
         this.paymentTerm = paymentTerm;
     }
     
-    public int Vendor.getPhone() {
-        return this.phone;
+    public String Vendor.getVendorName() {
+        return this.vendorName;
     }
     
-    public void Vendor.setPhone(int phone) {
-        this.phone = phone;
+    public void Vendor.setVendorName(String vendorName) {
+        this.vendorName = vendorName;
+    }
+    
+    public String Vendor.getPhoneNumber() {
+        return this.phoneNumber;
+    }
+    
+    public void Vendor.setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
     
 }

@@ -14,7 +14,7 @@ privileged aspect PaymentTerm_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager PaymentTerm.entityManager;
     
-    public static final List<String> PaymentTerm.fieldNames4OrderClauseFilter = java.util.Arrays.asList("paymentTerm");
+    public static final List<String> PaymentTerm.fieldNames4OrderClauseFilter = java.util.Arrays.asList("term");
     
     public static final EntityManager PaymentTerm.entityManager() {
         EntityManager em = new PaymentTerm().entityManager;

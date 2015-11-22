@@ -3,7 +3,7 @@
 
 package com.myshop.domain;
 
-import com.myshop.domain.PaymentTerm;
+import com.myshop.domain.PaymentTermDataOnDemand;
 import com.myshop.domain.Vendor;
 import com.myshop.domain.VendorDataOnDemand;
 import java.security.SecureRandom;
@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect VendorDataOnDemand_Roo_DataOnDemand {
@@ -23,22 +24,19 @@ privileged aspect VendorDataOnDemand_Roo_DataOnDemand {
     
     private List<Vendor> VendorDataOnDemand.data;
     
+    @Autowired
+    PaymentTermDataOnDemand VendorDataOnDemand.paymentTermDataOnDemand;
+    
     public Vendor VendorDataOnDemand.getNewTransientVendor(int index) {
         Vendor obj = new Vendor();
-        setPaymentTerm(obj, index);
-        setPhone(obj, index);
+        setPhoneNumber(obj, index);
         setVendorName(obj, index);
         return obj;
     }
     
-    public void VendorDataOnDemand.setPaymentTerm(Vendor obj, int index) {
-        PaymentTerm paymentTerm = null;
-        obj.setPaymentTerm(paymentTerm);
-    }
-    
-    public void VendorDataOnDemand.setPhone(Vendor obj, int index) {
-        int phone = index;
-        obj.setPhone(phone);
+    public void VendorDataOnDemand.setPhoneNumber(Vendor obj, int index) {
+        String phoneNumber = "phoneNumber_" + index;
+        obj.setPhoneNumber(phoneNumber);
     }
     
     public void VendorDataOnDemand.setVendorName(Vendor obj, int index) {

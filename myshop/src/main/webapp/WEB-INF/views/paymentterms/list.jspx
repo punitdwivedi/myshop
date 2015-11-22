@@ -4,7 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_com_myshop_domain_PaymentTerm" items="${paymentterms}" z="0/oRN9vDfjXY5O0jGBoaLA87PJY=">
         <table:table data="${paymentterms}" id="l_com_myshop_domain_PaymentTerm" path="/paymentterms" z="W2tvbVaxdITZ5y4ks3BVH0yND2k=">
-            <table:column id="c_com_myshop_domain_PaymentTerm_paymentTerm" property="paymentTerm" z="blrMYsXP6Ru9B2HaV2amNk/WcnY="/>
+            <table:column id="c_com_myshop_domain_PaymentTerm_term" property="term" z="gnhnywyCQAF9xKriuTiE9d8YMoo="/>
         </table:table>
     </page:list>
 </div>

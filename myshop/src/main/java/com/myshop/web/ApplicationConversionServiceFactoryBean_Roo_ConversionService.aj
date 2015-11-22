@@ -51,7 +51,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<AddressType, String> ApplicationConversionServiceFactoryBean.getAddressTypeToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.myshop.domain.AddressType, java.lang.String>() {
             public String convert(AddressType addressType) {
-                return new StringBuilder().append(addressType.getAddressType()).toString();
+                return new StringBuilder().append(addressType.getTypeName()).toString();
             }
         };
     }
@@ -195,7 +195,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<PaymentTerm, String> ApplicationConversionServiceFactoryBean.getPaymentTermToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.myshop.domain.PaymentTerm, java.lang.String>() {
             public String convert(PaymentTerm paymentTerm) {
-                return new StringBuilder().append(paymentTerm.getPaymentTerm()).toString();
+                return new StringBuilder().append(paymentTerm.getTerm()).toString();
             }
         };
     }
@@ -291,7 +291,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Vendor, String> ApplicationConversionServiceFactoryBean.getVendorToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.myshop.domain.Vendor, java.lang.String>() {
             public String convert(Vendor vendor) {
-                return new StringBuilder().append(vendor.getVendorName()).append(' ').append(vendor.getPhone()).toString();
+                return new StringBuilder().append(vendor.getVendorName()).append(' ').append(vendor.getPhoneNumber()).toString();
             }
         };
     }
