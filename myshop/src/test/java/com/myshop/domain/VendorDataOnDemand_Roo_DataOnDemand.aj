@@ -3,10 +3,9 @@
 
 package com.myshop.domain;
 
-import com.myshop.domain.AddressDataOnDemand;
-import com.myshop.domain.Customer;
-import com.myshop.domain.CustomerAddress;
-import com.myshop.domain.CustomerAddressDataOnDemand;
+import com.myshop.domain.PaymentTerm;
+import com.myshop.domain.Vendor;
+import com.myshop.domain.VendorDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -14,32 +13,40 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-privileged aspect CustomerAddressDataOnDemand_Roo_DataOnDemand {
+privileged aspect VendorDataOnDemand_Roo_DataOnDemand {
     
-    declare @type: CustomerAddressDataOnDemand: @Component;
+    declare @type: VendorDataOnDemand: @Component;
     
-    private Random CustomerAddressDataOnDemand.rnd = new SecureRandom();
+    private Random VendorDataOnDemand.rnd = new SecureRandom();
     
-    private List<CustomerAddress> CustomerAddressDataOnDemand.data;
+    private List<Vendor> VendorDataOnDemand.data;
     
-    @Autowired
-    AddressDataOnDemand CustomerAddressDataOnDemand.addressDataOnDemand;
-    
-    public CustomerAddress CustomerAddressDataOnDemand.getNewTransientCustomerAddress(int index) {
-        CustomerAddress obj = new CustomerAddress();
-        setCustomer(obj, index);
+    public Vendor VendorDataOnDemand.getNewTransientVendor(int index) {
+        Vendor obj = new Vendor();
+        setPaymentTerm(obj, index);
+        setPhone(obj, index);
+        setVendorName(obj, index);
         return obj;
     }
     
-    public void CustomerAddressDataOnDemand.setCustomer(CustomerAddress obj, int index) {
-        Customer customer = null;
-        obj.setCustomer(customer);
+    public void VendorDataOnDemand.setPaymentTerm(Vendor obj, int index) {
+        PaymentTerm paymentTerm = null;
+        obj.setPaymentTerm(paymentTerm);
     }
     
-    public CustomerAddress CustomerAddressDataOnDemand.getSpecificCustomerAddress(int index) {
+    public void VendorDataOnDemand.setPhone(Vendor obj, int index) {
+        int phone = index;
+        obj.setPhone(phone);
+    }
+    
+    public void VendorDataOnDemand.setVendorName(Vendor obj, int index) {
+        String vendorName = "vendorName_" + index;
+        obj.setVendorName(vendorName);
+    }
+    
+    public Vendor VendorDataOnDemand.getSpecificVendor(int index) {
         init();
         if (index < 0) {
             index = 0;
@@ -47,36 +54,36 @@ privileged aspect CustomerAddressDataOnDemand_Roo_DataOnDemand {
         if (index > (data.size() - 1)) {
             index = data.size() - 1;
         }
-        CustomerAddress obj = data.get(index);
+        Vendor obj = data.get(index);
         Long id = obj.getId();
-        return CustomerAddress.findCustomerAddress(id);
+        return Vendor.findVendor(id);
     }
     
-    public CustomerAddress CustomerAddressDataOnDemand.getRandomCustomerAddress() {
+    public Vendor VendorDataOnDemand.getRandomVendor() {
         init();
-        CustomerAddress obj = data.get(rnd.nextInt(data.size()));
+        Vendor obj = data.get(rnd.nextInt(data.size()));
         Long id = obj.getId();
-        return CustomerAddress.findCustomerAddress(id);
+        return Vendor.findVendor(id);
     }
     
-    public boolean CustomerAddressDataOnDemand.modifyCustomerAddress(CustomerAddress obj) {
+    public boolean VendorDataOnDemand.modifyVendor(Vendor obj) {
         return false;
     }
     
-    public void CustomerAddressDataOnDemand.init() {
+    public void VendorDataOnDemand.init() {
         int from = 0;
         int to = 10;
-        data = CustomerAddress.findCustomerAddressEntries(from, to);
+        data = Vendor.findVendorEntries(from, to);
         if (data == null) {
-            throw new IllegalStateException("Find entries implementation for 'CustomerAddress' illegally returned null");
+            throw new IllegalStateException("Find entries implementation for 'Vendor' illegally returned null");
         }
         if (!data.isEmpty()) {
             return;
         }
         
-        data = new ArrayList<CustomerAddress>();
+        data = new ArrayList<Vendor>();
         for (int i = 0; i < 10; i++) {
-            CustomerAddress obj = getNewTransientCustomerAddress(i);
+            Vendor obj = getNewTransientVendor(i);
             try {
                 obj.persist();
             } catch (final ConstraintViolationException e) {

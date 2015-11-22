@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_myshop_domain_ProductCategory" modelAttribute="productCategory" path="/productcategorys" versionField="Version" z="O6P6M1VjHb1LgeXLUDxNoc1fOtI=">
+        <field:input field="name" id="c_com_myshop_domain_ProductCategory_name" required="true" z="R9IDge3I9YSXUi20FhXWeOpCMGc="/>
+        <field:datetime dateTimePattern="${productCategory_lastmodifieddate_date_format}" field="lastModifiedDate" id="c_com_myshop_domain_ProductCategory_lastModifiedDate" z="cGDQyexvGiTQJRhT6yKpAHeO3hs="/>
+    </form:update>
+</div>

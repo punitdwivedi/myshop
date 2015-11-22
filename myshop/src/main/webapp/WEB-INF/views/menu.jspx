@@ -30,5 +30,21 @@
             <menu:item id="i_customeraddress_new" messageCode="global_menu_new" url="/customeraddresses?form" z="3PGALrK73iVVRmBhWa+rgRaHWNM="/>
             <menu:item id="i_customeraddress_list" messageCode="global_menu_list" url="/customeraddresses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="DeMsKJNLafI3cbciTTfdjW2Cxss="/>
         </menu:category>
+        <menu:category id="c_customercontact" z="/BNLKnilZLUvoWCeaDt9+6XJAjc=">
+            <menu:item id="i_customercontact_new" messageCode="global_menu_new" url="/customercontacts?form" z="kKnzBBQ7Tb3OSOCMN9QDg5psA10="/>
+            <menu:item id="i_customercontact_list" messageCode="global_menu_list" url="/customercontacts?page=1&amp;size=${empty param.size ? 10 : param.size}" z="r56KqASFfCnr3niIQM2zGxN2LPU="/>
+        </menu:category>
+        <menu:category id="c_productcategory" z="hzz0b9xJhhfHLP7k2OSh9dwWf6w=">
+            <menu:item id="i_productcategory_new" messageCode="global_menu_new" url="/productcategorys?form" z="ufOtm2Vgq+WjnoWjzxglgM62pfA="/>
+            <menu:item id="i_productcategory_list" messageCode="global_menu_list" url="/productcategorys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="XTdMOaWp7VxTXox4oExorlB7gyw="/>
+        </menu:category>
+        <menu:category id="c_vendor" z="Xx4JxoRV1mz6Kt9DuTWCt02UTQs=">
+            <menu:item id="i_vendor_new" messageCode="global_menu_new" url="/vendors?form" z="5DUNHCgAaFlQsUsHrIfmstuWxPM="/>
+            <menu:item id="i_vendor_list" messageCode="global_menu_list" url="/vendors?page=1&amp;size=${empty param.size ? 10 : param.size}" z="PaHIFalbQwm47Wrz8iGe8DCcyXI="/>
+        </menu:category>
+        <menu:category id="c_product" z="vJ6efqiSxFssuvqFTsXpvZ3AvA8=">
+            <menu:item id="i_product_new" messageCode="global_menu_new" url="/products?form" z="Ezf8cTW61d2RkMNEcYkDJpG01kc="/>
+            <menu:item id="i_product_list" messageCode="global_menu_list" url="/products?page=1&amp;size=${empty param.size ? 10 : param.size}" z="kEeyCmUUYXShbDEWwOLheaAkM50="/>
+        </menu:category>
     </menu:menu>
 </div>

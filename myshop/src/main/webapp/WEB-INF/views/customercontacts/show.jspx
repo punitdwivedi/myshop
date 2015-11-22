@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myshop_domain_CustomerContact" object="${customercontact}" path="/customercontacts" z="CFPvwZ4SAXGJjcACY42qYE7wRNo=">
+        <field:display field="customer" id="s_com_myshop_domain_CustomerContact_customer" object="${customercontact}" z="T2hm2WZwHcDFDflG6u2vXybab9s="/>
+        <field:display field="firstName" id="s_com_myshop_domain_CustomerContact_firstName" object="${customercontact}" z="EzQWDTwQcSte9vn57pmXQipQzbE="/>
+        <field:display field="lastName" id="s_com_myshop_domain_CustomerContact_lastName" object="${customercontact}" z="ZWqJVmuQK9TZ9R86s6Wylb9eUQM="/>
+        <field:display field="mobile" id="s_com_myshop_domain_CustomerContact_mobile" object="${customercontact}" z="OwVpMsjxij6XeoIMUNuzhkJHthY="/>
+        <field:display field="phone" id="s_com_myshop_domain_CustomerContact_phone" object="${customercontact}" z="CB00PWnUKQsRvIJRedrSiBbb9tA="/>
+        <field:display field="email" id="s_com_myshop_domain_CustomerContact_email" object="${customercontact}" z="BSSdiVVlRmVDbpbgF1rNPi10Nf8="/>
+        <field:display field="note" id="s_com_myshop_domain_CustomerContact_note" object="${customercontact}" z="LcdrguKoXb4L0zrJjZg7tlRFQuE="/>
+        <field:display date="true" dateTimePattern="${customerContact_dob_date_format}" field="dob" id="s_com_myshop_domain_CustomerContact_dob" object="${customercontact}" z="q3wSASzbRrL6svWLCIE6VUPSIRY="/>
+    </page:show>
+</div>

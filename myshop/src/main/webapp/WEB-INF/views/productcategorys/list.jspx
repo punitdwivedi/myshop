@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_ProductCategory" items="${productcategorys}" z="HGLD41l9evYFn0szuKLCuKSNLSc=">
+        <table:table data="${productcategorys}" id="l_com_myshop_domain_ProductCategory" path="/productcategorys" z="DoumxmvlijA2lr9s4I6GKMyXgcE=">
+            <table:column id="c_com_myshop_domain_ProductCategory_name" property="name" z="RhnvMMmrdYo2T+OlVE2PtzSLku8="/>
+            <table:column date="true" dateTimePattern="${productCategory_lastmodifieddate_date_format}" id="c_com_myshop_domain_ProductCategory_lastModifiedDate" property="lastModifiedDate" z="AU8cvYMVLlONS/lxpCHtWfIKu3U="/>
+        </table:table>
+    </page:list>
+</div>

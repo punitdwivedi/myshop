@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_CustomerContact" items="${customercontacts}" z="L8DRVqumUYavWyek7+/QbY//ZCY=">
+        <table:table data="${customercontacts}" id="l_com_myshop_domain_CustomerContact" path="/customercontacts" z="B3NjfECUU1NnU3pGvjxfHnlft6I=">
+            <table:column id="c_com_myshop_domain_CustomerContact_customer" property="customer" z="RZdO6z+K5YEE+2BVpzPE6tRiE7U="/>
+            <table:column id="c_com_myshop_domain_CustomerContact_firstName" property="firstName" z="LV2aDXnHxD4s8bbPRtafncWgAZw="/>
+            <table:column id="c_com_myshop_domain_CustomerContact_lastName" property="lastName" z="W7T1LVMGvskCwM7qg48QJyV4C94="/>
+            <table:column id="c_com_myshop_domain_CustomerContact_mobile" property="mobile" z="u9OpMUcQ7/nIE5sah7co3NadJ34="/>
+            <table:column id="c_com_myshop_domain_CustomerContact_phone" property="phone" z="t2YsShYgLvLJFt9kbAp7q/sbIv0="/>
+            <table:column id="c_com_myshop_domain_CustomerContact_email" property="email" z="mNAbK5UgjHI+3PfxUbsaDnLBWWo="/>
+        </table:table>
+    </page:list>
+</div>

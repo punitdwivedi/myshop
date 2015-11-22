@@ -3,10 +3,9 @@
 
 package com.myshop.domain;
 
-import com.myshop.domain.AddressDataOnDemand;
-import com.myshop.domain.Customer;
-import com.myshop.domain.CustomerAddress;
-import com.myshop.domain.CustomerAddressDataOnDemand;
+import com.myshop.domain.Product;
+import com.myshop.domain.ProductDataOnDemand;
+import com.myshop.domain.VendorDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -17,29 +16,23 @@ import javax.validation.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-privileged aspect CustomerAddressDataOnDemand_Roo_DataOnDemand {
+privileged aspect ProductDataOnDemand_Roo_DataOnDemand {
     
-    declare @type: CustomerAddressDataOnDemand: @Component;
+    declare @type: ProductDataOnDemand: @Component;
     
-    private Random CustomerAddressDataOnDemand.rnd = new SecureRandom();
+    private Random ProductDataOnDemand.rnd = new SecureRandom();
     
-    private List<CustomerAddress> CustomerAddressDataOnDemand.data;
+    private List<Product> ProductDataOnDemand.data;
     
     @Autowired
-    AddressDataOnDemand CustomerAddressDataOnDemand.addressDataOnDemand;
+    VendorDataOnDemand ProductDataOnDemand.vendorDataOnDemand;
     
-    public CustomerAddress CustomerAddressDataOnDemand.getNewTransientCustomerAddress(int index) {
-        CustomerAddress obj = new CustomerAddress();
-        setCustomer(obj, index);
+    public Product ProductDataOnDemand.getNewTransientProduct(int index) {
+        Product obj = new Product();
         return obj;
     }
     
-    public void CustomerAddressDataOnDemand.setCustomer(CustomerAddress obj, int index) {
-        Customer customer = null;
-        obj.setCustomer(customer);
-    }
-    
-    public CustomerAddress CustomerAddressDataOnDemand.getSpecificCustomerAddress(int index) {
+    public Product ProductDataOnDemand.getSpecificProduct(int index) {
         init();
         if (index < 0) {
             index = 0;
@@ -47,36 +40,36 @@ privileged aspect CustomerAddressDataOnDemand_Roo_DataOnDemand {
         if (index > (data.size() - 1)) {
             index = data.size() - 1;
         }
-        CustomerAddress obj = data.get(index);
+        Product obj = data.get(index);
         Long id = obj.getId();
-        return CustomerAddress.findCustomerAddress(id);
+        return Product.findProduct(id);
     }
     
-    public CustomerAddress CustomerAddressDataOnDemand.getRandomCustomerAddress() {
+    public Product ProductDataOnDemand.getRandomProduct() {
         init();
-        CustomerAddress obj = data.get(rnd.nextInt(data.size()));
+        Product obj = data.get(rnd.nextInt(data.size()));
         Long id = obj.getId();
-        return CustomerAddress.findCustomerAddress(id);
+        return Product.findProduct(id);
     }
     
-    public boolean CustomerAddressDataOnDemand.modifyCustomerAddress(CustomerAddress obj) {
+    public boolean ProductDataOnDemand.modifyProduct(Product obj) {
         return false;
     }
     
-    public void CustomerAddressDataOnDemand.init() {
+    public void ProductDataOnDemand.init() {
         int from = 0;
         int to = 10;
-        data = CustomerAddress.findCustomerAddressEntries(from, to);
+        data = Product.findProductEntries(from, to);
         if (data == null) {
-            throw new IllegalStateException("Find entries implementation for 'CustomerAddress' illegally returned null");
+            throw new IllegalStateException("Find entries implementation for 'Product' illegally returned null");
         }
         if (!data.isEmpty()) {
             return;
         }
         
-        data = new ArrayList<CustomerAddress>();
+        data = new ArrayList<Product>();
         for (int i = 0; i < 10; i++) {
-            CustomerAddress obj = getNewTransientCustomerAddress(i);
+            Product obj = getNewTransientProduct(i);
             try {
                 obj.persist();
             } catch (final ConstraintViolationException e) {

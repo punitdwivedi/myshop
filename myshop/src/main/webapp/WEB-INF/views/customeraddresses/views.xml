@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="customeraddresses/list">
+        <put-attribute name="body" value="/WEB-INF/views/customeraddresses/list.jspx"/>
+    </definition>
+<definition extends="default" name="customeraddresses/show">
+        <put-attribute name="body" value="/WEB-INF/views/customeraddresses/show.jspx"/>
+    </definition>
+<definition extends="default" name="customeraddresses/create">
+        <put-attribute name="body" value="/WEB-INF/views/customeraddresses/create.jspx"/>
+    </definition>
+<definition extends="default" name="customeraddresses/update">
+        <put-attribute name="body" value="/WEB-INF/views/customeraddresses/update.jspx"/>
+    </definition>
+</tiles-definitions>
