@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myshop_domain_CustomerPaymentDetail" object="${customerpaymentdetail}" path="/customerpaymentdetails" z="MubefThNNLji0CFIYQN1ErSWCiA=">
+        <field:display field="paymentId" id="s_com_myshop_domain_CustomerPaymentDetail_paymentId" object="${customerpaymentdetail}" z="Y6F1SEqnOjr+nS+WQ77NnC9hXTg="/>
+        <field:display field="invoiceLineNo" id="s_com_myshop_domain_CustomerPaymentDetail_invoiceLineNo" object="${customerpaymentdetail}" z="QSCYdFkHp2f+PtHNrPrJSIFQKhg="/>
+        <field:display field="amount" id="s_com_myshop_domain_CustomerPaymentDetail_amount" object="${customerpaymentdetail}" z="QSsm2ewlHHYDCyff2OWsxfh5GxE="/>
+    </page:show>
+</div>

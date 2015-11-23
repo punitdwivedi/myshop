@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_SalesChannel" items="${saleschannels}" z="zsJ5+21koy3kdqOmUjfB5pM8/iY=">
+        <table:table data="${saleschannels}" id="l_com_myshop_domain_SalesChannel" path="/saleschannels" z="WZcjlh7QOWqiLj90WdqHza1xPPA=">
+            <table:column id="c_com_myshop_domain_SalesChannel_salesChannelName" property="salesChannelName" z="Lq0aGNP2Rndw3/kS9T8+tVfIHtI="/>
+            <table:column id="c_com_myshop_domain_SalesChannel_salesChannelCommission" property="salesChannelCommission" z="7xnqQSjKNl08WdkshWU+i3D9cZE="/>
+            <table:column id="c_com_myshop_domain_SalesChannel_note" property="note" z="fE7EyzVydXTJmh6rqvWcWRlyoAI="/>
+        </table:table>
+    </page:list>
+</div>

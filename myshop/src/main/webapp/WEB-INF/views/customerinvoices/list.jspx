@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_CustomerInvoice" items="${customerinvoices}" z="QOOT+17WKyFNvwnuohwjKui1omI=">
+        <table:table data="${customerinvoices}" id="l_com_myshop_domain_CustomerInvoice" path="/customerinvoices" z="8KeghqaX7KKfTQ+VfnvnmdEHbhE=">
+            <table:column date="true" dateTimePattern="${customerInvoice_invoicedate_date_format}" id="c_com_myshop_domain_CustomerInvoice_invoiceDate" property="invoiceDate" z="AhtpluVEnNRNRJH/Idb34Vl0lws="/>
+            <table:column date="true" dateTimePattern="${customerInvoice_duedate_date_format}" id="c_com_myshop_domain_CustomerInvoice_dueDate" property="dueDate" z="QnTDF/eigyi1N9q2aOwTtjK1S7k="/>
+            <table:column id="c_com_myshop_domain_CustomerInvoice_status" property="status" z="8VOfwje8QjSQfFzGcrsdzD5YRAA="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_myshop_domain_SalesChannelTranasaction" modelAttribute="salesChannelTranasaction" path="/saleschanneltranasactions" versionField="Version" z="EOOirz4XlM830PBw9EkvUWRl03U=">
+        <field:datetime dateTimePattern="${salesChannelTranasaction_solddate_date_format}" field="soldDate" id="c_com_myshop_domain_SalesChannelTranasaction_soldDate" z="EkT6y7h7j/AYXgBxKWiuLFI0SEI="/>
+        <field:select field="ProductId" id="c_com_myshop_domain_SalesChannelTranasaction_ProductId" itemValue="id" items="${products}" path="/products" z="LDABOgRCsCN0qE4rAk/zMoFQHmM="/>
+        <field:input field="soldQty" id="c_com_myshop_domain_SalesChannelTranasaction_soldQty" validationMessageCode="field_invalid_number" z="OnTU2LAgAHH2AN/bTYTODZRISHY="/>
+        <field:input field="unit" id="c_com_myshop_domain_SalesChannelTranasaction_unit" z="TLCSX40MSxhFmRi3Bd72UxFGCoQ="/>
+        <field:input field="unitPrice" id="c_com_myshop_domain_SalesChannelTranasaction_unitPrice" validationMessageCode="field_invalid_number" z="xuTJfYHiYI2UZizreb2/kRzerxA="/>
+        <field:select field="salesChannelId" id="c_com_myshop_domain_SalesChannelTranasaction_salesChannelId" itemValue="id" items="${saleschannels}" path="/saleschannels" z="WcdFTvUlqnjx7fVvQwVPH5Rp3Rg="/>
+    </form:update>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myshop_domain_CustomerInvoiceDetails" object="${customerinvoicedetails}" path="/customerinvoicedetailses" z="WlBgVAP9C29VBTYDFUKcxii6+zU=">
+        <field:display field="customerId" id="s_com_myshop_domain_CustomerInvoiceDetails_customerId" object="${customerinvoicedetails}" z="3cH585VDJ4e67xXfSgv9Dodf9iA="/>
+        <field:display field="customerPOLineNo" id="s_com_myshop_domain_CustomerInvoiceDetails_customerPOLineNo" object="${customerinvoicedetails}" z="P8HrJ5Yo+L+qD6uTo+4ygcpag0Y="/>
+        <field:display field="invoiceQty" id="s_com_myshop_domain_CustomerInvoiceDetails_invoiceQty" object="${customerinvoicedetails}" z="fytscZePWJ8o6yAYxejCCl5JuAE="/>
+        <field:display field="unit" id="s_com_myshop_domain_CustomerInvoiceDetails_unit" object="${customerinvoicedetails}" z="flXrppzCrq0DoSLUn4u2iXucaf4="/>
+        <field:display field="unitPrice" id="s_com_myshop_domain_CustomerInvoiceDetails_unitPrice" object="${customerinvoicedetails}" z="ewKPknnR6Z5GCx5GA0EXgOFyHes="/>
+        <field:display field="status" id="s_com_myshop_domain_CustomerInvoiceDetails_status" object="${customerinvoicedetails}" z="cQ11Z69rreVO8LWlO+aEG9i/hBs="/>
+    </page:show>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myshop_domain_SalesChannelTranasaction" object="${saleschanneltranasaction}" path="/saleschanneltranasactions" z="L9wlEPyXPmk5vNhGp/ZV8WQnlmU=">
+        <field:display date="true" dateTimePattern="${salesChannelTranasaction_solddate_date_format}" field="soldDate" id="s_com_myshop_domain_SalesChannelTranasaction_soldDate" object="${saleschanneltranasaction}" z="J3Ba+IbNKIgg+e2wVBT1JhebLzw="/>
+        <field:display field="productId" id="s_com_myshop_domain_SalesChannelTranasaction_ProductId" object="${saleschanneltranasaction}" z="gCXd7GPrLGP32sKt2id5hN8tBbY="/>
+        <field:display field="soldQty" id="s_com_myshop_domain_SalesChannelTranasaction_soldQty" object="${saleschanneltranasaction}" z="Ks4Km7EvTJjjYqjJcNbkdpbCDGs="/>
+        <field:display field="unit" id="s_com_myshop_domain_SalesChannelTranasaction_unit" object="${saleschanneltranasaction}" z="a3nr9ViYWBkkFPzttc/Z6JCPVBE="/>
+        <field:display field="unitPrice" id="s_com_myshop_domain_SalesChannelTranasaction_unitPrice" object="${saleschanneltranasaction}" z="ppbWR+wLTfzExUgVvs8G8A9ZieY="/>
+        <field:display field="salesChannelId" id="s_com_myshop_domain_SalesChannelTranasaction_salesChannelId" object="${saleschanneltranasaction}" z="wAKG4mHEbSTfX+vtbylgAO7xol4="/>
+    </page:show>
+</div>

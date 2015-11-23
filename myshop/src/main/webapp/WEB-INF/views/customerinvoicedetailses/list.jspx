@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_CustomerInvoiceDetails" items="${customerinvoicedetailses}" z="5CRPWfGsGRhQiuRTIxpqUg3ZW0s=">
+        <table:table data="${customerinvoicedetailses}" id="l_com_myshop_domain_CustomerInvoiceDetails" path="/customerinvoicedetailses" z="/JujJSFnyWTXwDUk8mBvxUiBb34=">
+            <table:column id="c_com_myshop_domain_CustomerInvoiceDetails_customerId" property="customerId" z="n63n4QjtJp7NYwl7jAAa2pap4QE="/>
+            <table:column id="c_com_myshop_domain_CustomerInvoiceDetails_customerPOLineNo" property="customerPOLineNo" z="EJrI4AOIwN//2MRphHxBJLWemNw="/>
+            <table:column id="c_com_myshop_domain_CustomerInvoiceDetails_invoiceQty" property="invoiceQty" z="rtO9MvhictHQTFSB8e3074eo0lk="/>
+            <table:column id="c_com_myshop_domain_CustomerInvoiceDetails_unit" property="unit" z="pMWFevK573I52598Ziim4+Xaok0="/>
+            <table:column id="c_com_myshop_domain_CustomerInvoiceDetails_unitPrice" property="unitPrice" z="hRk8hi+xPzQOYvccTv+gOKbs6gY="/>
+            <table:column id="c_com_myshop_domain_CustomerInvoiceDetails_status" property="status" z="P3tMCqwPXy4CqWsDHyihwcR3Jro="/>
+        </table:table>
+    </page:list>
+</div>

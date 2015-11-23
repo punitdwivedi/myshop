@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myshop_domain_CustomerCreditMemo" object="${customercreditmemo}" path="/customercreditmemoes" z="acatqFZk8a5KNj+fZv8ilBtVn24=">
+        <field:display field="rejectedNo" id="s_com_myshop_domain_CustomerCreditMemo_rejectedNo" object="${customercreditmemo}" z="8/xi6ZJc1aqixoGd49NMdLdOApE="/>
+        <field:display date="true" dateTimePattern="${customerCreditMemo_issuedate_date_format}" field="issueDate" id="s_com_myshop_domain_CustomerCreditMemo_issueDate" object="${customercreditmemo}" z="uKS3c5T3jq/01rBtOON43nYCNig="/>
+        <field:display field="customerPoId" id="s_com_myshop_domain_CustomerCreditMemo_customerPoId" object="${customercreditmemo}" z="kJQnjre6eIT0PMqsoWjhgLBLt2A="/>
+        <field:display field="customerPoLineNo" id="s_com_myshop_domain_CustomerCreditMemo_customerPoLineNo" object="${customercreditmemo}" z="IXWZ/++LIBYh1eexkloM0tpXcbY="/>
+        <field:display field="rejectedQty" id="s_com_myshop_domain_CustomerCreditMemo_rejectedQty" object="${customercreditmemo}" z="rMKQ04lg6tAQ+sXQi02gFFPDvNE="/>
+        <field:display field="unit" id="s_com_myshop_domain_CustomerCreditMemo_unit" object="${customercreditmemo}" z="uLfqrDmOF3dFz+9S9CLmmQ3vzi0="/>
+        <field:display field="unitPrice" id="s_com_myshop_domain_CustomerCreditMemo_unitPrice" object="${customercreditmemo}" z="JogDIQR09CgJl4ScQB1Y6C3NjIw="/>
+        <field:display field="rejectionReason" id="s_com_myshop_domain_CustomerCreditMemo_rejectionReason" object="${customercreditmemo}" z="A0Bsmw1rylRXZY1qEtx4ZMoZijM="/>
+    </page:show>
+</div>

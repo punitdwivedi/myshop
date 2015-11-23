@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_SalesChannelTranasaction" items="${saleschanneltranasactions}" z="JcCxRiLgeN75uizULwViQHzwoiQ=">
+        <table:table data="${saleschanneltranasactions}" id="l_com_myshop_domain_SalesChannelTranasaction" path="/saleschanneltranasactions" z="3vPQ5hTjabi/+RcuhG7voHiVRCw=">
+            <table:column date="true" dateTimePattern="${salesChannelTranasaction_solddate_date_format}" id="c_com_myshop_domain_SalesChannelTranasaction_soldDate" property="soldDate" z="H7AbUqVvt3+XNK/+egEy7W3NFIc="/>
+            <table:column id="c_com_myshop_domain_SalesChannelTranasaction_ProductId" property="productId" z="mJENqDdnPlAe2cqx/8QER/e431Y="/>
+            <table:column id="c_com_myshop_domain_SalesChannelTranasaction_soldQty" property="soldQty" z="S0RS9iarH8/YfruD6KW8ycTNDqM="/>
+            <table:column id="c_com_myshop_domain_SalesChannelTranasaction_unit" property="unit" z="CGLvHE2pRBx/NH5iAEAfyG9ETI0="/>
+            <table:column id="c_com_myshop_domain_SalesChannelTranasaction_unitPrice" property="unitPrice" z="b45CxCuHjmJjk9g6vYs09AidN2U="/>
+            <table:column id="c_com_myshop_domain_SalesChannelTranasaction_salesChannelId" property="salesChannelId" z="IEv9ln8xAPXhzz9K+Sh0jFXuGg0="/>
+        </table:table>
+    </page:list>
+</div>

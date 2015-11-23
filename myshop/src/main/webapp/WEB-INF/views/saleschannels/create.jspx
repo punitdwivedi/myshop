@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_myshop_domain_SalesChannel" modelAttribute="salesChannel" path="/saleschannels" render="${empty dependencies}" z="Cut72Cszrt8bM2joJKTI3sin+w0=">
+        <field:input field="salesChannelName" id="c_com_myshop_domain_SalesChannel_salesChannelName" z="p2+NUBPWg2ePk0Ck6HcaltCexwg="/>
+        <field:input field="salesChannelCommission" id="c_com_myshop_domain_SalesChannel_salesChannelCommission" validationMessageCode="field_invalid_number" z="GSKhUWL6Jm91iT4zWpVp2cM8a+o="/>
+        <field:input field="note" id="c_com_myshop_domain_SalesChannel_note" z="eMe7Dlsdx9cfMYOGsuoSpi2JXpo="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_myshop_domain_SalesChannel" render="${not empty dependencies}" z="HYDavhH+wLF6ZuDqhajc6ePoros="/>
+</div>

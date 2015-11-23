@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_CustomerCreditMemo" items="${customercreditmemoes}" z="ejn0HkFHtVYxabU+45l0/jwH05w=">
+        <table:table data="${customercreditmemoes}" id="l_com_myshop_domain_CustomerCreditMemo" path="/customercreditmemoes" z="Q/NWwPEVLq+3qFFBJPqOy7tp0dc=">
+            <table:column id="c_com_myshop_domain_CustomerCreditMemo_rejectedNo" property="rejectedNo" z="XKxVbuDODwgk178ecgMwFYulvLM="/>
+            <table:column date="true" dateTimePattern="${customerCreditMemo_issuedate_date_format}" id="c_com_myshop_domain_CustomerCreditMemo_issueDate" property="issueDate" z="pXbk9JIQmDqfe/HI3F1zsLrQmFI="/>
+            <table:column id="c_com_myshop_domain_CustomerCreditMemo_customerPoId" property="customerPoId" z="zDqnVKgg6/R05SQuX4BEIT2hhxY="/>
+            <table:column id="c_com_myshop_domain_CustomerCreditMemo_customerPoLineNo" property="customerPoLineNo" z="yJfK9asP6rMzTAgKXfgDDg9fPMA="/>
+            <table:column id="c_com_myshop_domain_CustomerCreditMemo_rejectedQty" property="rejectedQty" z="7aUyqtUUrAGHrtX/xEyafEvi0r4="/>
+            <table:column id="c_com_myshop_domain_CustomerCreditMemo_unit" property="unit" z="R4lQmcE+dmjbw5yM8mElxIt/Ydg="/>
+        </table:table>
+    </page:list>
+</div>

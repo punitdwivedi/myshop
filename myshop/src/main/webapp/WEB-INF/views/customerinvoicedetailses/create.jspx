@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_myshop_domain_CustomerInvoiceDetails" modelAttribute="customerInvoiceDetails" path="/customerinvoicedetailses" render="${empty dependencies}" z="oBk051tscicCrM/opZMl8azzGNY=">
+        <field:select field="customerId" id="c_com_myshop_domain_CustomerInvoiceDetails_customerId" itemValue="id" items="${customers}" path="/customers" z="XehuT8TIGxM/tuDLsbkEi+qQLpU="/>
+        <field:select field="customerPOLineNo" id="c_com_myshop_domain_CustomerInvoiceDetails_customerPOLineNo" itemValue="id" items="${customerpodetailses}" path="/customerpodetailses" z="zyiDesnKujJr80LSbzBSkQrbQAY="/>
+        <field:input field="invoiceQty" id="c_com_myshop_domain_CustomerInvoiceDetails_invoiceQty" validationMessageCode="field_invalid_number" z="w4lBCkx7+Sx+ZQ7JbuBaNmiPHhM="/>
+        <field:input field="unit" id="c_com_myshop_domain_CustomerInvoiceDetails_unit" z="sFEl8s5LK1s2S4L1bTLuC7htQ58="/>
+        <field:input field="unitPrice" id="c_com_myshop_domain_CustomerInvoiceDetails_unitPrice" validationMessageCode="field_invalid_number" z="Fb1ADzhAQYn485L7tb43/KcabCw="/>
+        <field:input field="status" id="c_com_myshop_domain_CustomerInvoiceDetails_status" z="t01ByofZL3/x8RfCLZo+8eT/4Ss="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_myshop_domain_CustomerInvoiceDetails" render="${not empty dependencies}" z="E4zBtwAIf0D73PTVTSIPnWltQq8="/>
+</div>
