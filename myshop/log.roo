@@ -175,3 +175,23 @@ entity jpa --class ~.domain.Vendor --testAutomatically
 field reference --fieldName paymentTerm --type ~.domain.PaymentTerm
 field string --fieldName vendorName --notNull
 field string --fieldName phoneNumber --notNull --sizeMin 10
+entity jpa --class ~.domain.CustomerPoDelivery --testAutomatically 
+field reference --fieldName customerPoLineNo --type ~.domain.CustomerPoDetails
+field date --fieldName shipOutDate --type java.util.Date
+field number --fieldName shipOutQuantity --type java.lang.Double
+field number --fieldName shipmentId --type java.lang.Integer
+field number --fieldName shipmentLineNo --type java.lang.Integer
+web mvc all --package ~.web
+entity jpa --class ~.domain.Shipment --testAutomatically 
+field date --fieldName shippingDate --type java.util.Date
+field number --fieldName shippingFee --type java.lang.Double
+field string --fieldName carrier --notNull
+field string --fieldName trackingNumber --notNull
+field string --fieldName paidBy --notNull
+web mvc all --package com.myshop.web
+entity jpa --class ~.domain.ShipmentDetails --testAutomatically 
+field reference --fieldName shippingId --type ~.domain.Shipment
+field reference --fieldName customerPoLineNo --type ~.domain.CustomerPoDetails
+field number --fieldName shippedQuantity --type java.lang.Double
+web mvc all --package com.myshop.web
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2015-11-22 22:04:00

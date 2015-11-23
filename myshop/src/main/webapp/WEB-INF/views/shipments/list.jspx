@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_Shipment" items="${shipments}" z="GHyEkPQo7844H/W+l+cGUM5v9Yg=">
+        <table:table data="${shipments}" id="l_com_myshop_domain_Shipment" path="/shipments" z="HeHJmCviMsnNNSvpIQNEBTs4who=">
+            <table:column date="true" dateTimePattern="${shipment_shippingdate_date_format}" id="c_com_myshop_domain_Shipment_shippingDate" property="shippingDate" z="P6tmYMsEWjZPK79eivpKvtlO9m8="/>
+            <table:column id="c_com_myshop_domain_Shipment_shippingFee" property="shippingFee" z="x4kb+kTkw4t/2HVI14JFXPsI0lY="/>
+            <table:column id="c_com_myshop_domain_Shipment_carrier" property="carrier" z="2fjDlFkF5o8/XUD+gCeuYUd7YUc="/>
+            <table:column id="c_com_myshop_domain_Shipment_trackingNumber" property="trackingNumber" z="N+1tDFtqarCiqujpPepXgKP2p/M="/>
+            <table:column id="c_com_myshop_domain_Shipment_paidBy" property="paidBy" z="5NPsqLKmkshhKwNtuuIJhJUxLjY="/>
+        </table:table>
+    </page:list>
+</div>

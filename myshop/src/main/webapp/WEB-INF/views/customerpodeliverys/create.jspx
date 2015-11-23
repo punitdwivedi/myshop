@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_myshop_domain_CustomerPoDelivery" modelAttribute="customerPoDelivery" path="/customerpodeliverys" render="${empty dependencies}" z="7hiQV8f7URWnG9sFWJWdyVYD1cM=">
+        <field:select field="customerPoLineNo" id="c_com_myshop_domain_CustomerPoDelivery_customerPoLineNo" itemValue="id" items="${customerpodetailses}" path="/customerpodetailses" z="MRqDNfxLkHbjfqsnKZh5Wp1qWMI="/>
+        <field:datetime dateTimePattern="${customerPoDelivery_shipoutdate_date_format}" field="shipOutDate" id="c_com_myshop_domain_CustomerPoDelivery_shipOutDate" z="P2Jhb+DKPz1fovWTs0Btc3bkp3s="/>
+        <field:input field="shipOutQuantity" id="c_com_myshop_domain_CustomerPoDelivery_shipOutQuantity" validationMessageCode="field_invalid_number" z="LqPcdZ91FTM5qOJU2sP8uMnyOig="/>
+        <field:input field="shipmentId" id="c_com_myshop_domain_CustomerPoDelivery_shipmentId" validationMessageCode="field_invalid_integer" z="uliZERxFZTwu4K8zVlr8jkx8Pgo="/>
+        <field:input field="shipmentLineNo" id="c_com_myshop_domain_CustomerPoDelivery_shipmentLineNo" validationMessageCode="field_invalid_integer" z="RDWws0OKwmGwn8qOHkFjYKH+t6U="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_myshop_domain_CustomerPoDelivery" render="${not empty dependencies}" z="1Qsmld3e1i2jXrTxj1D2boMdyfc="/>
+</div>

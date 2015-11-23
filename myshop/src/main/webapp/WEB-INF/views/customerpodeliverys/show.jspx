@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myshop_domain_CustomerPoDelivery" object="${customerpodelivery}" path="/customerpodeliverys" z="jCLknW7Q0fuCEZTaDTIwdk/1PEY=">
+        <field:display field="customerPoLineNo" id="s_com_myshop_domain_CustomerPoDelivery_customerPoLineNo" object="${customerpodelivery}" z="3FE3OJNTwKt3q6NFbZ25VlAluuc="/>
+        <field:display date="true" dateTimePattern="${customerPoDelivery_shipoutdate_date_format}" field="shipOutDate" id="s_com_myshop_domain_CustomerPoDelivery_shipOutDate" object="${customerpodelivery}" z="RyRgcCE0ZHWOhuXtSSrzY3ysPP0="/>
+        <field:display field="shipOutQuantity" id="s_com_myshop_domain_CustomerPoDelivery_shipOutQuantity" object="${customerpodelivery}" z="AC8xpQrv8jm7uaJKm9axjwcDpHo="/>
+        <field:display field="shipmentId" id="s_com_myshop_domain_CustomerPoDelivery_shipmentId" object="${customerpodelivery}" z="NhzI3aya3ruegpM0s5Lj4iMdX8c="/>
+        <field:display field="shipmentLineNo" id="s_com_myshop_domain_CustomerPoDelivery_shipmentLineNo" object="${customerpodelivery}" z="DJHKG2Yxw00LVGnvJrQLYurb74w="/>
+    </page:show>
+</div>

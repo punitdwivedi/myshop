@@ -9,10 +9,13 @@ import com.myshop.domain.Customer;
 import com.myshop.domain.CustomerAddress;
 import com.myshop.domain.CustomerContact;
 import com.myshop.domain.CustomerPO;
+import com.myshop.domain.CustomerPoDelivery;
 import com.myshop.domain.CustomerPoDetails;
 import com.myshop.domain.PaymentTerm;
 import com.myshop.domain.Product;
 import com.myshop.domain.ProductCategory;
+import com.myshop.domain.Shipment;
+import com.myshop.domain.ShipmentDetails;
 import com.myshop.domain.Users;
 import com.myshop.domain.Vendor;
 import com.myshop.web.ApplicationConversionServiceFactoryBean;
@@ -168,6 +171,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<CustomerPoDelivery, String> ApplicationConversionServiceFactoryBean.getCustomerPoDeliveryToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.CustomerPoDelivery, java.lang.String>() {
+            public String convert(CustomerPoDelivery customerPoDelivery) {
+                return new StringBuilder().append(customerPoDelivery.getShipOutDate()).append(' ').append(customerPoDelivery.getShipOutQuantity()).append(' ').append(customerPoDelivery.getShipmentId()).append(' ').append(customerPoDelivery.getShipmentLineNo()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, CustomerPoDelivery> ApplicationConversionServiceFactoryBean.getIdToCustomerPoDeliveryConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.CustomerPoDelivery>() {
+            public com.myshop.domain.CustomerPoDelivery convert(java.lang.Long id) {
+                return CustomerPoDelivery.findCustomerPoDelivery(id);
+            }
+        };
+    }
+    
+    public Converter<String, CustomerPoDelivery> ApplicationConversionServiceFactoryBean.getStringToCustomerPoDeliveryConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.CustomerPoDelivery>() {
+            public com.myshop.domain.CustomerPoDelivery convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), CustomerPoDelivery.class);
+            }
+        };
+    }
+    
     public Converter<CustomerPoDetails, String> ApplicationConversionServiceFactoryBean.getCustomerPoDetailsToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.myshop.domain.CustomerPoDetails, java.lang.String>() {
             public String convert(CustomerPoDetails customerPoDetails) {
@@ -264,6 +291,54 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<Shipment, String> ApplicationConversionServiceFactoryBean.getShipmentToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.Shipment, java.lang.String>() {
+            public String convert(Shipment shipment) {
+                return new StringBuilder().append(shipment.getShippingDate()).append(' ').append(shipment.getShippingFee()).append(' ').append(shipment.getCarrier()).append(' ').append(shipment.getTrackingNumber()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Shipment> ApplicationConversionServiceFactoryBean.getIdToShipmentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.Shipment>() {
+            public com.myshop.domain.Shipment convert(java.lang.Long id) {
+                return Shipment.findShipment(id);
+            }
+        };
+    }
+    
+    public Converter<String, Shipment> ApplicationConversionServiceFactoryBean.getStringToShipmentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.Shipment>() {
+            public com.myshop.domain.Shipment convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Shipment.class);
+            }
+        };
+    }
+    
+    public Converter<ShipmentDetails, String> ApplicationConversionServiceFactoryBean.getShipmentDetailsToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.ShipmentDetails, java.lang.String>() {
+            public String convert(ShipmentDetails shipmentDetails) {
+                return new StringBuilder().append(shipmentDetails.getShippedQuantity()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, ShipmentDetails> ApplicationConversionServiceFactoryBean.getIdToShipmentDetailsConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.ShipmentDetails>() {
+            public com.myshop.domain.ShipmentDetails convert(java.lang.Long id) {
+                return ShipmentDetails.findShipmentDetails(id);
+            }
+        };
+    }
+    
+    public Converter<String, ShipmentDetails> ApplicationConversionServiceFactoryBean.getStringToShipmentDetailsConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.ShipmentDetails>() {
+            public com.myshop.domain.ShipmentDetails convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), ShipmentDetails.class);
+            }
+        };
+    }
+    
     public Converter<Users, String> ApplicationConversionServiceFactoryBean.getUsersToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.myshop.domain.Users, java.lang.String>() {
             public String convert(Users users) {
@@ -331,6 +406,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getCustomerPOToStringConverter());
         registry.addConverter(getIdToCustomerPOConverter());
         registry.addConverter(getStringToCustomerPOConverter());
+        registry.addConverter(getCustomerPoDeliveryToStringConverter());
+        registry.addConverter(getIdToCustomerPoDeliveryConverter());
+        registry.addConverter(getStringToCustomerPoDeliveryConverter());
         registry.addConverter(getCustomerPoDetailsToStringConverter());
         registry.addConverter(getIdToCustomerPoDetailsConverter());
         registry.addConverter(getStringToCustomerPoDetailsConverter());
@@ -343,6 +421,12 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getProductCategoryToStringConverter());
         registry.addConverter(getIdToProductCategoryConverter());
         registry.addConverter(getStringToProductCategoryConverter());
+        registry.addConverter(getShipmentToStringConverter());
+        registry.addConverter(getIdToShipmentConverter());
+        registry.addConverter(getStringToShipmentConverter());
+        registry.addConverter(getShipmentDetailsToStringConverter());
+        registry.addConverter(getIdToShipmentDetailsConverter());
+        registry.addConverter(getStringToShipmentDetailsConverter());
         registry.addConverter(getUsersToStringConverter());
         registry.addConverter(getIdToUsersConverter());
         registry.addConverter(getStringToUsersConverter());

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_CustomerPoDelivery" items="${customerpodeliverys}" z="isyYfhIwBb+Pm93N45/jQOqU7Jo=">
+        <table:table data="${customerpodeliverys}" id="l_com_myshop_domain_CustomerPoDelivery" path="/customerpodeliverys" z="emOLuDry29By61cYUzhvSk1efns=">
+            <table:column id="c_com_myshop_domain_CustomerPoDelivery_customerPoLineNo" property="customerPoLineNo" z="Hr+cNigbr5Ok5m/4a7JvJRdFses="/>
+            <table:column date="true" dateTimePattern="${customerPoDelivery_shipoutdate_date_format}" id="c_com_myshop_domain_CustomerPoDelivery_shipOutDate" property="shipOutDate" z="HTNyN6Rbt/O5BZR+ddHcaIWimiM="/>
+            <table:column id="c_com_myshop_domain_CustomerPoDelivery_shipOutQuantity" property="shipOutQuantity" z="Y+kqxiXMsKMMi+Bjb8NlkPguKsQ="/>
+            <table:column id="c_com_myshop_domain_CustomerPoDelivery_shipmentId" property="shipmentId" z="5wVAjigSJl6o2XEJ9fFjhKsNUxU="/>
+            <table:column id="c_com_myshop_domain_CustomerPoDelivery_shipmentLineNo" property="shipmentLineNo" z="d3SCWmhjuxfSQVRsNyBM/NuWQFs="/>
+        </table:table>
+    </page:list>
+</div>
