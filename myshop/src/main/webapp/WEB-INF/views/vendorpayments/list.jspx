@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_VendorPayment" items="${vendorpayments}" z="cuxfdsX/rC+tT/gicZXdQKnByj8=">
+        <table:table data="${vendorpayments}" id="l_com_myshop_domain_VendorPayment" path="/vendorpayments" z="Q02jgp12hOhtamrJ1YriQdSsAXU=">
+            <table:column date="true" dateTimePattern="${vendorPayment_paydate_date_format}" id="c_com_myshop_domain_VendorPayment_payDate" property="payDate" z="kERG+XWEHMNTaiwmEhMkYV+4zrQ="/>
+            <table:column id="c_com_myshop_domain_VendorPayment_vendorInvoiceNo" property="vendorInvoiceNo" z="0TSQDdRcQ3V8uvtN0Efr0lQ5J8c="/>
+            <table:column id="c_com_myshop_domain_VendorPayment_paymentAmount" property="paymentAmount" z="rakSbtrozQDGf3vzC51/qzWm/SM="/>
+            <table:column id="c_com_myshop_domain_VendorPayment_tax" property="tax" z="UEuLDKPWoSz9YtYw4d/KQkeHQHE="/>
+        </table:table>
+    </page:list>
+</div>

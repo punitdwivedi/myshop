@@ -250,3 +250,92 @@ field reference --fieldName paymentId --type ~.domain.CustomerPayment
 field reference --fieldName invoiceLineNo --type ~.domain.CustomerInvoiceDetails
 field number --fieldName amount --type java.lang.Double
 web mvc all --package com.myshop.web
+entity jpa --class ~.domain.Vendor --testAutomatically
+field string --fieldName Name --notNull 
+field reference --fieldName PaymentTerm --type ~.domain.PaymentTerm
+field string --fieldName website
+field string --fieldName note
+web mvc all --package com.myshop.web
+web mvc all --package com.myshop.web
+web mvc all --package ~.web
+entity jpa --class ~.domain.VendorAddress --testAutomatically
+field reference --fieldName vendor --type ~.domain.Vendor
+field reference --fieldName adderss --type ~.domain.Address
+web mvc all --package ~.web
+entity jpa --class ~.domain.VendorContactPerson --testAutomatically
+field reference --fieldName vendor --type ~.domain.Vendor
+// [failed] field string --fieldName position
+field string --fieldName vendorPosition
+field string --fieldName firstName --notNull
+field string --fieldName lastName --notNull
+field string --fieldName phone --notNull
+field string --fieldName mobile
+field string --fieldName email
+field string --fieldName note
+web mvc all --package ~.web
+entity jpa --class ~.domain.CompanyShippingAddress --testAutomatically
+field string --fieldName street1 --notNull 
+field string --fieldName street2
+field string --fieldName city --notNull 
+// [failed] field string --fieldName state --notNull 
+field string --fieldName stateName --notNull 
+field number --fieldName zip --type java.lang.Integer
+field string --fieldName country --notNull 
+field string --fieldName contactPerson --notNull 
+field string --fieldName telephone --notNull 
+web mvc all --package ~.web
+entity jpa --class ~.domain.VendorPurchaseOrder --testAutomatically
+field reference --fieldName vendor --type ~.domain.Vendor
+field reference --fieldName warehouse --type ~.domain.CompanyShippingAddress
+field boolean --fieldName isStatusOpen --notNull 
+field string --fieldName note
+web mvc all --package ~.web
+entity jpa --class ~.domain.VendorPoDetail --testAutomatically
+field reference --fieldName vendorPo --type ~.domain.VendorPurchaseOrder
+field reference --fieldName product --type ~.domain.Product
+field reference --fieldName CustomerPoLine --type ~.domain.CustomerPoDetails
+field string --fieldName vendorPartNo
+field number --fieldName qty --type java.lang.Double
+field date --fieldName requiredDate --type java.util.Date
+field date --fieldName confirmDate --type java.util.Date
+field string --fieldName unit
+field number --fieldName unitPrice --type java.lang.Double
+field string --fieldName status
+field string --fieldName note
+web mvc all --package ~.web
+entity jpa --class ~.domain.VendorPayment --testAutomatically
+field date --fieldName payDate --type java.util.Date
+field string --fieldName vendorInvoiceNo
+field number --fieldName paymentAmount --type java.lang.Double
+field number --fieldName tax --type java.lang.Double
+web mvc all --package ~.web
+entity jpa --class ~.domain.VendorPaymentDetail --testAutomatically
+field reference --fieldName vendorPayment --type ~.domain.VendorPayment
+field reference --fieldName vendorPaymentId --type ~.domain.VendorPayment
+field reference --fieldName vendorPoLineNo --type ~.domain.VendorPoDetail
+field number --fieldName unitPrice --type java.lang.Double
+field number --fieldName qty --type java.lang.Double
+web mvc all --package ~.web
+entity jpa --class ~.domain.VendorDebitMemo --testAutomatically
+field date --fieldName issueDate --type java.util.Date
+field reference --fieldName vendorPoLineNo --type ~.domain.VendorPoDetail
+field number --fieldName rejectedQty --type java.lang.Double
+field number --fieldName rejectedUnitPrice --type java.lang.Double
+field boolean --fieldName isOpen
+web mvc all --package ~.web
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2015-11-23 11:13:58
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-11-23 11:31:26
+entity jpa --class ~.domain.ProductsReceived --testAutomatically
+field reference --fieldName productId --type ~.domain.Product
+field reference --fieldName vendorPoLineNo --type ~.domain.VendorPoDetail
+field number --fieldName receivedQty --type java.lang.Double
+field date --fieldName receivedDate --type java.util.Date
+web mvc all --package ~.web
+entity jpa --class ~.domain.ProductInventory --testAutomatically
+field reference --fieldName productId --type ~.domain.Product
+field number --fieldName inventoryQty --type java.lang.Double
+field reference --fieldName warehouseNo --type ~.domain.CompanyShippingAddress
+field number --fieldName roomNo --type java.lang.Double
+field number --fieldName shelfNo --type java.lang.Double
+field number --fieldName seatNo --type java.lang.Double
+web mvc all --package ~.web

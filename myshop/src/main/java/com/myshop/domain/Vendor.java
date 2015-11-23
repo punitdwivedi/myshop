@@ -2,9 +2,8 @@ package com.myshop.domain;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
-import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.persistence.ManyToOne;
 
 @RooJavaBean
 @RooToString
@@ -13,17 +12,19 @@ public class Vendor {
 
     /**
      */
+    @NotNull
+    private String Name;
+
+    /**
+     */
     @ManyToOne
-    private PaymentTerm paymentTerm;
+    private PaymentTerm PaymentTerm;
 
     /**
      */
-    @NotNull
-    private String vendorName;
+    private String website;
 
     /**
      */
-    @NotNull
-    @Size(min = 10)
-    private String phoneNumber;
+    private String note;
 }

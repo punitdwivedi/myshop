@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_VendorPoDetail" items="${vendorpodetails}" z="0k2Qau4enAbuDzdntPpDXRTDC3I=">
+        <table:table data="${vendorpodetails}" id="l_com_myshop_domain_VendorPoDetail" path="/vendorpodetails" z="3aDHuO8KQAZEDEytMO0i4z+W9TM=">
+            <table:column id="c_com_myshop_domain_VendorPoDetail_vendorPo" property="vendorPo" z="/G4OF8pQodsYmyME+MnIMLGk814="/>
+            <table:column id="c_com_myshop_domain_VendorPoDetail_product" property="product" z="CeVxzBQI3E+NjTAsH9INjHNufss="/>
+            <table:column id="c_com_myshop_domain_VendorPoDetail_CustomerPoLine" property="customerPoLine" z="caEkqOYff0QJx33cLWi9FcQKBmk="/>
+            <table:column id="c_com_myshop_domain_VendorPoDetail_vendorPartNo" property="vendorPartNo" z="WsdlVSzAafIyeav49XiM2y2zh+w="/>
+            <table:column id="c_com_myshop_domain_VendorPoDetail_qty" property="qty" z="EqdqR67Uu0vUxpAu7RfiDSnYo0Q="/>
+            <table:column date="true" dateTimePattern="${vendorPoDetail_requireddate_date_format}" id="c_com_myshop_domain_VendorPoDetail_requiredDate" property="requiredDate" z="Bw6WDyvLYJOca8Lsy9zV2mz0rUs="/>
+        </table:table>
+    </page:list>
+</div>

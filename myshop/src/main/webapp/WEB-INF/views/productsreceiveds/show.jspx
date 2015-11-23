@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myshop_domain_ProductsReceived" object="${productsreceived}" path="/productsreceiveds" z="e1qRNJ0EERcho6b8UL+n2dLV6YE=">
+        <field:display field="productId" id="s_com_myshop_domain_ProductsReceived_productId" object="${productsreceived}" z="CoujA0KEq41+OZDvc2VmIFDxPGA="/>
+        <field:display field="vendorPoLineNo" id="s_com_myshop_domain_ProductsReceived_vendorPoLineNo" object="${productsreceived}" z="oXmNlsVeSz5bhP3qfAdFt53w4zI="/>
+        <field:display field="receivedQty" id="s_com_myshop_domain_ProductsReceived_receivedQty" object="${productsreceived}" z="O0qFl5m9pIuzK5CwCMVmb5F/bGM="/>
+        <field:display date="true" dateTimePattern="${productsReceived_receiveddate_date_format}" field="receivedDate" id="s_com_myshop_domain_ProductsReceived_receivedDate" object="${productsreceived}" z="q8hJwNx0yKRi+FhexknwtOG2Njk="/>
+    </page:show>
+</div>

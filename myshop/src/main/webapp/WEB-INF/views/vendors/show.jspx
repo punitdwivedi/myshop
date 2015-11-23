@@ -3,8 +3,9 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_myshop_domain_Vendor" object="${vendor}" path="/vendors" z="DjQrjI3y2vTgnuP0AtIGQmOGFHA=">
-        <field:display field="paymentTerm" id="s_com_myshop_domain_Vendor_paymentTerm" object="${vendor}" z="aMG+EE84lrBvrzqtZDICaX7OlPM="/>
-        <field:display field="vendorName" id="s_com_myshop_domain_Vendor_vendorName" object="${vendor}" z="vH+bRAXt9g7vqjlrMm7Bj2qAzJs="/>
-        <field:display field="phoneNumber" id="s_com_myshop_domain_Vendor_phoneNumber" object="${vendor}" z="KFqDlj/bjvj3PkHtkc3dSuzF8pg="/>
+        <field:display field="name" id="s_com_myshop_domain_Vendor_Name" object="${vendor}" z="4JNKtKFCDb3KycdQZLTCQJTKk6s="/>
+        <field:display field="paymentTerm" id="s_com_myshop_domain_Vendor_PaymentTerm" object="${vendor}" z="3AWF/pPlu8IIWzVnxgG/pG7LTh8="/>
+        <field:display field="website" id="s_com_myshop_domain_Vendor_website" object="${vendor}" z="iIUjelgeFoWTIJyiilPr0rd2KW8="/>
+        <field:display field="note" id="s_com_myshop_domain_Vendor_note" object="${vendor}" z="RDcauoRPLq2u7k3mbEww0LR5dm8="/>
     </page:show>
 </div>

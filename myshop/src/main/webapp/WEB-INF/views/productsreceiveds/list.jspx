@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_ProductsReceived" items="${productsreceiveds}" z="OdktKP/u+oa+lk3mq0tLWbVam7w=">
+        <table:table data="${productsreceiveds}" id="l_com_myshop_domain_ProductsReceived" path="/productsreceiveds" z="wWLujFwi2O2VNCOb6s7E8cD88fY=">
+            <table:column id="c_com_myshop_domain_ProductsReceived_productId" property="productId" z="a9MD6cskMKIP9+wFIIELEJ9xBxQ="/>
+            <table:column id="c_com_myshop_domain_ProductsReceived_vendorPoLineNo" property="vendorPoLineNo" z="si2X3bqIKEYsW7aXqFCgJhwyUJA="/>
+            <table:column id="c_com_myshop_domain_ProductsReceived_receivedQty" property="receivedQty" z="A/TmnGXqYvsrjdPuD5aL1Hp6jlk="/>
+            <table:column date="true" dateTimePattern="${productsReceived_receiveddate_date_format}" id="c_com_myshop_domain_ProductsReceived_receivedDate" property="receivedDate" z="75JXcGbcEWgrdWJ1yAm8pnkOIc4="/>
+        </table:table>
+    </page:list>
+</div>

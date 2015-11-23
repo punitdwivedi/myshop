@@ -5,6 +5,7 @@ package com.myshop.web;
 
 import com.myshop.domain.Address;
 import com.myshop.domain.AddressType;
+import com.myshop.domain.CompanyShippingAddress;
 import com.myshop.domain.Customer;
 import com.myshop.domain.CustomerAddress;
 import com.myshop.domain.CustomerContact;
@@ -19,12 +20,21 @@ import com.myshop.domain.CustomerPoDetails;
 import com.myshop.domain.PaymentTerm;
 import com.myshop.domain.Product;
 import com.myshop.domain.ProductCategory;
+import com.myshop.domain.ProductInventory;
+import com.myshop.domain.ProductsReceived;
 import com.myshop.domain.SalesChannel;
 import com.myshop.domain.SalesChannelTranasaction;
 import com.myshop.domain.Shipment;
 import com.myshop.domain.ShipmentDetails;
 import com.myshop.domain.Users;
 import com.myshop.domain.Vendor;
+import com.myshop.domain.VendorAddress;
+import com.myshop.domain.VendorContactPerson;
+import com.myshop.domain.VendorDebitMemo;
+import com.myshop.domain.VendorPayment;
+import com.myshop.domain.VendorPaymentDetail;
+import com.myshop.domain.VendorPoDetail;
+import com.myshop.domain.VendorPurchaseOrder;
 import com.myshop.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.core.convert.converter.Converter;
@@ -78,6 +88,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.AddressType>() {
             public com.myshop.domain.AddressType convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), AddressType.class);
+            }
+        };
+    }
+    
+    public Converter<CompanyShippingAddress, String> ApplicationConversionServiceFactoryBean.getCompanyShippingAddressToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.CompanyShippingAddress, java.lang.String>() {
+            public String convert(CompanyShippingAddress companyShippingAddress) {
+                return new StringBuilder().append(companyShippingAddress.getStreet1()).append(' ').append(companyShippingAddress.getStreet2()).append(' ').append(companyShippingAddress.getCity()).append(' ').append(companyShippingAddress.getStateName()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, CompanyShippingAddress> ApplicationConversionServiceFactoryBean.getIdToCompanyShippingAddressConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.CompanyShippingAddress>() {
+            public com.myshop.domain.CompanyShippingAddress convert(java.lang.Long id) {
+                return CompanyShippingAddress.findCompanyShippingAddress(id);
+            }
+        };
+    }
+    
+    public Converter<String, CompanyShippingAddress> ApplicationConversionServiceFactoryBean.getStringToCompanyShippingAddressConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.CompanyShippingAddress>() {
+            public com.myshop.domain.CompanyShippingAddress convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), CompanyShippingAddress.class);
             }
         };
     }
@@ -418,6 +452,54 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<ProductInventory, String> ApplicationConversionServiceFactoryBean.getProductInventoryToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.ProductInventory, java.lang.String>() {
+            public String convert(ProductInventory productInventory) {
+                return new StringBuilder().append(productInventory.getInventoryQty()).append(' ').append(productInventory.getRoomNo()).append(' ').append(productInventory.getShelfNo()).append(' ').append(productInventory.getSeatNo()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, ProductInventory> ApplicationConversionServiceFactoryBean.getIdToProductInventoryConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.ProductInventory>() {
+            public com.myshop.domain.ProductInventory convert(java.lang.Long id) {
+                return ProductInventory.findProductInventory(id);
+            }
+        };
+    }
+    
+    public Converter<String, ProductInventory> ApplicationConversionServiceFactoryBean.getStringToProductInventoryConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.ProductInventory>() {
+            public com.myshop.domain.ProductInventory convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), ProductInventory.class);
+            }
+        };
+    }
+    
+    public Converter<ProductsReceived, String> ApplicationConversionServiceFactoryBean.getProductsReceivedToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.ProductsReceived, java.lang.String>() {
+            public String convert(ProductsReceived productsReceived) {
+                return new StringBuilder().append(productsReceived.getReceivedQty()).append(' ').append(productsReceived.getReceivedDate()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, ProductsReceived> ApplicationConversionServiceFactoryBean.getIdToProductsReceivedConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.ProductsReceived>() {
+            public com.myshop.domain.ProductsReceived convert(java.lang.Long id) {
+                return ProductsReceived.findProductsReceived(id);
+            }
+        };
+    }
+    
+    public Converter<String, ProductsReceived> ApplicationConversionServiceFactoryBean.getStringToProductsReceivedConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.ProductsReceived>() {
+            public com.myshop.domain.ProductsReceived convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), ProductsReceived.class);
+            }
+        };
+    }
+    
     public Converter<SalesChannel, String> ApplicationConversionServiceFactoryBean.getSalesChannelToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.myshop.domain.SalesChannel, java.lang.String>() {
             public String convert(SalesChannel salesChannel) {
@@ -541,7 +623,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Vendor, String> ApplicationConversionServiceFactoryBean.getVendorToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.myshop.domain.Vendor, java.lang.String>() {
             public String convert(Vendor vendor) {
-                return new StringBuilder().append(vendor.getVendorName()).append(' ').append(vendor.getPhoneNumber()).toString();
+                return new StringBuilder().append(vendor.getName()).append(' ').append(vendor.getWebsite()).append(' ').append(vendor.getNote()).toString();
             }
         };
     }
@@ -562,6 +644,174 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<VendorAddress, String> ApplicationConversionServiceFactoryBean.getVendorAddressToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.VendorAddress, java.lang.String>() {
+            public String convert(VendorAddress vendorAddress) {
+                return "(no displayable fields)";
+            }
+        };
+    }
+    
+    public Converter<Long, VendorAddress> ApplicationConversionServiceFactoryBean.getIdToVendorAddressConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.VendorAddress>() {
+            public com.myshop.domain.VendorAddress convert(java.lang.Long id) {
+                return VendorAddress.findVendorAddress(id);
+            }
+        };
+    }
+    
+    public Converter<String, VendorAddress> ApplicationConversionServiceFactoryBean.getStringToVendorAddressConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.VendorAddress>() {
+            public com.myshop.domain.VendorAddress convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), VendorAddress.class);
+            }
+        };
+    }
+    
+    public Converter<VendorContactPerson, String> ApplicationConversionServiceFactoryBean.getVendorContactPersonToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.VendorContactPerson, java.lang.String>() {
+            public String convert(VendorContactPerson vendorContactPerson) {
+                return new StringBuilder().append(vendorContactPerson.getVendorPosition()).append(' ').append(vendorContactPerson.getFirstName()).append(' ').append(vendorContactPerson.getLastName()).append(' ').append(vendorContactPerson.getPhone()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, VendorContactPerson> ApplicationConversionServiceFactoryBean.getIdToVendorContactPersonConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.VendorContactPerson>() {
+            public com.myshop.domain.VendorContactPerson convert(java.lang.Long id) {
+                return VendorContactPerson.findVendorContactPerson(id);
+            }
+        };
+    }
+    
+    public Converter<String, VendorContactPerson> ApplicationConversionServiceFactoryBean.getStringToVendorContactPersonConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.VendorContactPerson>() {
+            public com.myshop.domain.VendorContactPerson convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), VendorContactPerson.class);
+            }
+        };
+    }
+    
+    public Converter<VendorDebitMemo, String> ApplicationConversionServiceFactoryBean.getVendorDebitMemoToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.VendorDebitMemo, java.lang.String>() {
+            public String convert(VendorDebitMemo vendorDebitMemo) {
+                return new StringBuilder().append(vendorDebitMemo.getIssueDate()).append(' ').append(vendorDebitMemo.getRejectedQty()).append(' ').append(vendorDebitMemo.getRejectedUnitPrice()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, VendorDebitMemo> ApplicationConversionServiceFactoryBean.getIdToVendorDebitMemoConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.VendorDebitMemo>() {
+            public com.myshop.domain.VendorDebitMemo convert(java.lang.Long id) {
+                return VendorDebitMemo.findVendorDebitMemo(id);
+            }
+        };
+    }
+    
+    public Converter<String, VendorDebitMemo> ApplicationConversionServiceFactoryBean.getStringToVendorDebitMemoConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.VendorDebitMemo>() {
+            public com.myshop.domain.VendorDebitMemo convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), VendorDebitMemo.class);
+            }
+        };
+    }
+    
+    public Converter<VendorPayment, String> ApplicationConversionServiceFactoryBean.getVendorPaymentToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.VendorPayment, java.lang.String>() {
+            public String convert(VendorPayment vendorPayment) {
+                return new StringBuilder().append(vendorPayment.getPayDate()).append(' ').append(vendorPayment.getVendorInvoiceNo()).append(' ').append(vendorPayment.getPaymentAmount()).append(' ').append(vendorPayment.getTax()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, VendorPayment> ApplicationConversionServiceFactoryBean.getIdToVendorPaymentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.VendorPayment>() {
+            public com.myshop.domain.VendorPayment convert(java.lang.Long id) {
+                return VendorPayment.findVendorPayment(id);
+            }
+        };
+    }
+    
+    public Converter<String, VendorPayment> ApplicationConversionServiceFactoryBean.getStringToVendorPaymentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.VendorPayment>() {
+            public com.myshop.domain.VendorPayment convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), VendorPayment.class);
+            }
+        };
+    }
+    
+    public Converter<VendorPaymentDetail, String> ApplicationConversionServiceFactoryBean.getVendorPaymentDetailToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.VendorPaymentDetail, java.lang.String>() {
+            public String convert(VendorPaymentDetail vendorPaymentDetail) {
+                return new StringBuilder().append(vendorPaymentDetail.getUnitPrice()).append(' ').append(vendorPaymentDetail.getQty()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, VendorPaymentDetail> ApplicationConversionServiceFactoryBean.getIdToVendorPaymentDetailConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.VendorPaymentDetail>() {
+            public com.myshop.domain.VendorPaymentDetail convert(java.lang.Long id) {
+                return VendorPaymentDetail.findVendorPaymentDetail(id);
+            }
+        };
+    }
+    
+    public Converter<String, VendorPaymentDetail> ApplicationConversionServiceFactoryBean.getStringToVendorPaymentDetailConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.VendorPaymentDetail>() {
+            public com.myshop.domain.VendorPaymentDetail convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), VendorPaymentDetail.class);
+            }
+        };
+    }
+    
+    public Converter<VendorPoDetail, String> ApplicationConversionServiceFactoryBean.getVendorPoDetailToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.VendorPoDetail, java.lang.String>() {
+            public String convert(VendorPoDetail vendorPoDetail) {
+                return new StringBuilder().append(vendorPoDetail.getVendorPartNo()).append(' ').append(vendorPoDetail.getQty()).append(' ').append(vendorPoDetail.getRequiredDate()).append(' ').append(vendorPoDetail.getConfirmDate()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, VendorPoDetail> ApplicationConversionServiceFactoryBean.getIdToVendorPoDetailConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.VendorPoDetail>() {
+            public com.myshop.domain.VendorPoDetail convert(java.lang.Long id) {
+                return VendorPoDetail.findVendorPoDetail(id);
+            }
+        };
+    }
+    
+    public Converter<String, VendorPoDetail> ApplicationConversionServiceFactoryBean.getStringToVendorPoDetailConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.VendorPoDetail>() {
+            public com.myshop.domain.VendorPoDetail convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), VendorPoDetail.class);
+            }
+        };
+    }
+    
+    public Converter<VendorPurchaseOrder, String> ApplicationConversionServiceFactoryBean.getVendorPurchaseOrderToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.VendorPurchaseOrder, java.lang.String>() {
+            public String convert(VendorPurchaseOrder vendorPurchaseOrder) {
+                return new StringBuilder().append(vendorPurchaseOrder.getNote()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, VendorPurchaseOrder> ApplicationConversionServiceFactoryBean.getIdToVendorPurchaseOrderConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.VendorPurchaseOrder>() {
+            public com.myshop.domain.VendorPurchaseOrder convert(java.lang.Long id) {
+                return VendorPurchaseOrder.findVendorPurchaseOrder(id);
+            }
+        };
+    }
+    
+    public Converter<String, VendorPurchaseOrder> ApplicationConversionServiceFactoryBean.getStringToVendorPurchaseOrderConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.VendorPurchaseOrder>() {
+            public com.myshop.domain.VendorPurchaseOrder convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), VendorPurchaseOrder.class);
+            }
+        };
+    }
+    
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
         registry.addConverter(getAddressToStringConverter());
         registry.addConverter(getIdToAddressConverter());
@@ -569,6 +819,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getAddressTypeToStringConverter());
         registry.addConverter(getIdToAddressTypeConverter());
         registry.addConverter(getStringToAddressTypeConverter());
+        registry.addConverter(getCompanyShippingAddressToStringConverter());
+        registry.addConverter(getIdToCompanyShippingAddressConverter());
+        registry.addConverter(getStringToCompanyShippingAddressConverter());
         registry.addConverter(getCustomerToStringConverter());
         registry.addConverter(getIdToCustomerConverter());
         registry.addConverter(getStringToCustomerConverter());
@@ -611,6 +864,12 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getProductCategoryToStringConverter());
         registry.addConverter(getIdToProductCategoryConverter());
         registry.addConverter(getStringToProductCategoryConverter());
+        registry.addConverter(getProductInventoryToStringConverter());
+        registry.addConverter(getIdToProductInventoryConverter());
+        registry.addConverter(getStringToProductInventoryConverter());
+        registry.addConverter(getProductsReceivedToStringConverter());
+        registry.addConverter(getIdToProductsReceivedConverter());
+        registry.addConverter(getStringToProductsReceivedConverter());
         registry.addConverter(getSalesChannelToStringConverter());
         registry.addConverter(getIdToSalesChannelConverter());
         registry.addConverter(getStringToSalesChannelConverter());
@@ -629,6 +888,27 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getVendorToStringConverter());
         registry.addConverter(getIdToVendorConverter());
         registry.addConverter(getStringToVendorConverter());
+        registry.addConverter(getVendorAddressToStringConverter());
+        registry.addConverter(getIdToVendorAddressConverter());
+        registry.addConverter(getStringToVendorAddressConverter());
+        registry.addConverter(getVendorContactPersonToStringConverter());
+        registry.addConverter(getIdToVendorContactPersonConverter());
+        registry.addConverter(getStringToVendorContactPersonConverter());
+        registry.addConverter(getVendorDebitMemoToStringConverter());
+        registry.addConverter(getIdToVendorDebitMemoConverter());
+        registry.addConverter(getStringToVendorDebitMemoConverter());
+        registry.addConverter(getVendorPaymentToStringConverter());
+        registry.addConverter(getIdToVendorPaymentConverter());
+        registry.addConverter(getStringToVendorPaymentConverter());
+        registry.addConverter(getVendorPaymentDetailToStringConverter());
+        registry.addConverter(getIdToVendorPaymentDetailConverter());
+        registry.addConverter(getStringToVendorPaymentDetailConverter());
+        registry.addConverter(getVendorPoDetailToStringConverter());
+        registry.addConverter(getIdToVendorPoDetailConverter());
+        registry.addConverter(getStringToVendorPoDetailConverter());
+        registry.addConverter(getVendorPurchaseOrderToStringConverter());
+        registry.addConverter(getIdToVendorPurchaseOrderConverter());
+        registry.addConverter(getStringToVendorPurchaseOrderConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {

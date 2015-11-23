@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_myshop_domain_VendorAddress" modelAttribute="vendorAddress" path="/vendoraddresses" render="${empty dependencies}" z="IKW+nYRyqW1VpLkpmeyUK3+vWNw=">
+        <field:select field="vendor" id="c_com_myshop_domain_VendorAddress_vendor" itemValue="id" items="${vendors}" path="/vendors" z="X7eIkPwtqSWojkizsiYxNwkrfN0="/>
+        <field:select field="adderss" id="c_com_myshop_domain_VendorAddress_adderss" itemValue="id" items="${addresses}" path="/addresses" z="iP63mi9fcux6K3QdCL2r2AOlPao="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_myshop_domain_VendorAddress" render="${not empty dependencies}" z="Kk6Sj9wAvSEcqEt2bERRq+z0aLw="/>
+</div>

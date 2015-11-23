@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_ProductInventory" items="${productinventorys}" z="VfPhkWCOZE3SKMR7fB7DwJkEmxE=">
+        <table:table data="${productinventorys}" id="l_com_myshop_domain_ProductInventory" path="/productinventorys" z="cSn6zVC6EBmOHY4/+t6NMFplgNU=">
+            <table:column id="c_com_myshop_domain_ProductInventory_productId" property="productId" z="b3c2tN4dKZZlaSRAyE5ojYdljfs="/>
+            <table:column id="c_com_myshop_domain_ProductInventory_inventoryQty" property="inventoryQty" z="XX1COP/ZqK2oV101RqS5FqVHArY="/>
+            <table:column id="c_com_myshop_domain_ProductInventory_warehouseNo" property="warehouseNo" z="/SQkbXU6oxldwlXOb0cjeXizbRg="/>
+            <table:column id="c_com_myshop_domain_ProductInventory_roomNo" property="roomNo" z="B3LbNgMAahST1T5dbwdtpRKtIac="/>
+            <table:column id="c_com_myshop_domain_ProductInventory_shelfNo" property="shelfNo" z="z++tbnsa2iKxL/owKInCXmZKGys="/>
+            <table:column id="c_com_myshop_domain_ProductInventory_seatNo" property="seatNo" z="nUWXkFwFLAvlYXgEPTP8B87sq2U="/>
+        </table:table>
+    </page:list>
+</div>

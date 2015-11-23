@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_myshop_domain_ProductInventory" modelAttribute="productInventory" path="/productinventorys" versionField="Version" z="jBFX5Q7foCbLJ5urriCJvw0bMzU=">
+        <field:select field="productId" id="c_com_myshop_domain_ProductInventory_productId" itemValue="id" items="${products}" path="/products" z="UFnfP/xHPDSbCxX+fLqcWnL/PNI="/>
+        <field:input field="inventoryQty" id="c_com_myshop_domain_ProductInventory_inventoryQty" validationMessageCode="field_invalid_number" z="bD95+Jl+93r46lsMlo0FVKt6PUE="/>
+        <field:select field="warehouseNo" id="c_com_myshop_domain_ProductInventory_warehouseNo" itemValue="id" items="${companyshippingaddresses}" path="/companyshippingaddresses" z="1pKeHO1fJV7v46KMdIEnPn9nIl0="/>
+        <field:input field="roomNo" id="c_com_myshop_domain_ProductInventory_roomNo" validationMessageCode="field_invalid_number" z="y1qaF/mp74BuGHztDUw+mDf8B3I="/>
+        <field:input field="shelfNo" id="c_com_myshop_domain_ProductInventory_shelfNo" validationMessageCode="field_invalid_number" z="BTZ0Usreir1vaAoh9cJfQHi/pHg="/>
+        <field:input field="seatNo" id="c_com_myshop_domain_ProductInventory_seatNo" validationMessageCode="field_invalid_number" z="3KFASCm/W5K7DTzLijezb5cL/Rk="/>
+    </form:update>
+</div>

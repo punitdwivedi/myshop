@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myshop_domain_VendorPoDetail" object="${vendorpodetail}" path="/vendorpodetails" z="B5E5uUJuktdsVcqqp9YZnw7nCkc=">
+        <field:display field="vendorPo" id="s_com_myshop_domain_VendorPoDetail_vendorPo" object="${vendorpodetail}" z="mMtvrzlfezsBtit5z6UsiO/zSJ8="/>
+        <field:display field="product" id="s_com_myshop_domain_VendorPoDetail_product" object="${vendorpodetail}" z="2MfFFLHqktjfNJ3D7hsqUAJ9vPY="/>
+        <field:display field="customerPoLine" id="s_com_myshop_domain_VendorPoDetail_CustomerPoLine" object="${vendorpodetail}" z="Z3FiOEL7HRwNhi1HUcgWHdbLKo8="/>
+        <field:display field="vendorPartNo" id="s_com_myshop_domain_VendorPoDetail_vendorPartNo" object="${vendorpodetail}" z="l95Id7sCVOPHNA3z5THuwB5t8p4="/>
+        <field:display field="qty" id="s_com_myshop_domain_VendorPoDetail_qty" object="${vendorpodetail}" z="pn0vOPUM72HVe7shn3RtkxB/Qss="/>
+        <field:display date="true" dateTimePattern="${vendorPoDetail_requireddate_date_format}" field="requiredDate" id="s_com_myshop_domain_VendorPoDetail_requiredDate" object="${vendorpodetail}" z="Ktw2Ae4WUN0jLwiCXFbKZ0WbIhk="/>
+        <field:display date="true" dateTimePattern="${vendorPoDetail_confirmdate_date_format}" field="confirmDate" id="s_com_myshop_domain_VendorPoDetail_confirmDate" object="${vendorpodetail}" z="zm+r5OXKibN3QqlfFM4vLIBEsPU="/>
+        <field:display field="unit" id="s_com_myshop_domain_VendorPoDetail_unit" object="${vendorpodetail}" z="tYY4m9bwqzquHEmh1HW2AzGsHq0="/>
+        <field:display field="unitPrice" id="s_com_myshop_domain_VendorPoDetail_unitPrice" object="${vendorpodetail}" z="OYDimNRiHOnj1v/ki94AFXXleZQ="/>
+        <field:display field="status" id="s_com_myshop_domain_VendorPoDetail_status" object="${vendorpodetail}" z="C75SAOjAkd6B/oIBfmDUS9hsADQ="/>
+        <field:display field="note" id="s_com_myshop_domain_VendorPoDetail_note" object="${vendorpodetail}" z="PgoiXbecxgh/YuLuUj8Fx1ZLggo="/>
+    </page:show>
+</div>

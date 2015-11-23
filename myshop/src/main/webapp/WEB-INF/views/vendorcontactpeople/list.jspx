@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_VendorContactPerson" items="${vendorcontactpeople}" z="U1fDPCPlAXBzyP+O5nKJNqZNLtA=">
+        <table:table data="${vendorcontactpeople}" id="l_com_myshop_domain_VendorContactPerson" path="/vendorcontactpeople" z="dfm3XDeXZRf6MA4NqRhASo4Pzbw=">
+            <table:column id="c_com_myshop_domain_VendorContactPerson_vendor" property="vendor" z="ejbe6w0YbTEiYQsoI1Txquiv/L4="/>
+            <table:column id="c_com_myshop_domain_VendorContactPerson_vendorPosition" property="vendorPosition" z="DDetjq1FR0xh8ToGD6kMn7Ar7R8="/>
+            <table:column id="c_com_myshop_domain_VendorContactPerson_firstName" property="firstName" z="f1LR1/uvp6u7JJSfa9ROvPqAO3w="/>
+            <table:column id="c_com_myshop_domain_VendorContactPerson_lastName" property="lastName" z="vLJB19xmfoqEmaJgx6QDPJTktx0="/>
+            <table:column id="c_com_myshop_domain_VendorContactPerson_phone" property="phone" z="VhuE5nwB88GLB1T+1JX4V2wT5j4="/>
+            <table:column id="c_com_myshop_domain_VendorContactPerson_mobile" property="mobile" z="aSfAzYdnpUNDIhV7ccC27ahutD4="/>
+        </table:table>
+    </page:list>
+</div>

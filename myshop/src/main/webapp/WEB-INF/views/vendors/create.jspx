@@ -3,9 +3,10 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_myshop_domain_Vendor" modelAttribute="vendor" path="/vendors" render="${empty dependencies}" z="+XLRdFxas9ovdKL23GNfdw5zXto=">
-        <field:select field="paymentTerm" id="c_com_myshop_domain_Vendor_paymentTerm" itemValue="id" items="${paymentterms}" path="/paymentterms" z="kliiCJsXqRTMgEmWVOdb+slh4xs="/>
-        <field:input field="vendorName" id="c_com_myshop_domain_Vendor_vendorName" required="true" z="N4i69YfxMXNJbrvq7WPIRH7amms="/>
-        <field:input field="phoneNumber" id="c_com_myshop_domain_Vendor_phoneNumber" min="10" required="true" z="s9bp/+RUszz2yG0lb1q1NYcPX28="/>
+        <field:input field="Name" id="c_com_myshop_domain_Vendor_Name" required="true" z="4LtgbmDJQho6c2nH0XAYKZLiQ1E="/>
+        <field:select field="PaymentTerm" id="c_com_myshop_domain_Vendor_PaymentTerm" itemValue="id" items="${paymentterms}" path="/paymentterms" z="5ePIyd6GDq9aU2UHMLdVAg1XYyc="/>
+        <field:input field="website" id="c_com_myshop_domain_Vendor_website" z="Ye6VYhbZzu+JFkTMSux4cl7Vers="/>
+        <field:input field="note" id="c_com_myshop_domain_Vendor_note" z="rivj2DlgWucyYjaoUo34tCHeUZI="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_myshop_domain_Vendor" render="${not empty dependencies}" z="nNxY2vSnHxKpX8QZ1S5jkfa1SYg="/>
 </div>

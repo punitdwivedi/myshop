@@ -8,28 +8,36 @@ import com.myshop.domain.Vendor;
 
 privileged aspect Vendor_Roo_JavaBean {
     
+    public String Vendor.getName() {
+        return this.Name;
+    }
+    
+    public void Vendor.setName(String Name) {
+        this.Name = Name;
+    }
+    
     public PaymentTerm Vendor.getPaymentTerm() {
-        return this.paymentTerm;
+        return this.PaymentTerm;
     }
     
-    public void Vendor.setPaymentTerm(PaymentTerm paymentTerm) {
-        this.paymentTerm = paymentTerm;
+    public void Vendor.setPaymentTerm(PaymentTerm PaymentTerm) {
+        this.PaymentTerm = PaymentTerm;
     }
     
-    public String Vendor.getVendorName() {
-        return this.vendorName;
+    public String Vendor.getWebsite() {
+        return this.website;
     }
     
-    public void Vendor.setVendorName(String vendorName) {
-        this.vendorName = vendorName;
+    public void Vendor.setWebsite(String website) {
+        this.website = website;
     }
     
-    public String Vendor.getPhoneNumber() {
-        return this.phoneNumber;
+    public String Vendor.getNote() {
+        return this.note;
     }
     
-    public void Vendor.setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void Vendor.setNote(String note) {
+        this.note = note;
     }
     
 }

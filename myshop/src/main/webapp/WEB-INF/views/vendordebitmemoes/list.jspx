@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_VendorDebitMemo" items="${vendordebitmemoes}" z="ZG6y0p15wOnA0Qj0Jn+Vx+LgwPU=">
+        <table:table data="${vendordebitmemoes}" id="l_com_myshop_domain_VendorDebitMemo" path="/vendordebitmemoes" z="wJNK5vlh0Je4NtANti1bUzUwq9s=">
+            <table:column date="true" dateTimePattern="${vendorDebitMemo_issuedate_date_format}" id="c_com_myshop_domain_VendorDebitMemo_issueDate" property="issueDate" z="WrpHJEvjBOnLHkPafKHYS9REa2Q="/>
+            <table:column id="c_com_myshop_domain_VendorDebitMemo_vendorPoLineNo" property="vendorPoLineNo" z="gsKfwNga1h2l2UfRhvz2NR6UaVI="/>
+            <table:column id="c_com_myshop_domain_VendorDebitMemo_rejectedQty" property="rejectedQty" z="ZHY/HYDKKpvd9EF/83cexoQpT+o="/>
+            <table:column id="c_com_myshop_domain_VendorDebitMemo_rejectedUnitPrice" property="rejectedUnitPrice" z="srFm61c866QfALuawZT71Hb7TW0="/>
+            <table:column id="c_com_myshop_domain_VendorDebitMemo_isOpen" property="isOpen" z="T6Wq0I0lKhOrq+OuaG1anpun0Xs="/>
+        </table:table>
+    </page:list>
+</div>

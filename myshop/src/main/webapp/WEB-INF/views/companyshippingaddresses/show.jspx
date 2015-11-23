@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myshop_domain_CompanyShippingAddress" object="${companyshippingaddress}" path="/companyshippingaddresses" z="eOJ67thzLGZoF9QR31r4ls1seSI=">
+        <field:display field="street1" id="s_com_myshop_domain_CompanyShippingAddress_street1" object="${companyshippingaddress}" z="YtWM98c86+JOm6UjZsFjjrq7uc8="/>
+        <field:display field="street2" id="s_com_myshop_domain_CompanyShippingAddress_street2" object="${companyshippingaddress}" z="JkS2u17YjVwQrwVgwnZG3uWlxTc="/>
+        <field:display field="city" id="s_com_myshop_domain_CompanyShippingAddress_city" object="${companyshippingaddress}" z="fkzkCwszEK+vCq9w0/6rcdcRfKw="/>
+        <field:display field="stateName" id="s_com_myshop_domain_CompanyShippingAddress_stateName" object="${companyshippingaddress}" z="KAp+nEm3JcgD7GCT3PjHrY/prbg="/>
+        <field:display field="zip" id="s_com_myshop_domain_CompanyShippingAddress_zip" object="${companyshippingaddress}" z="lMIeCHW7fi0rAkuhxdVoJb/WAJI="/>
+        <field:display field="country" id="s_com_myshop_domain_CompanyShippingAddress_country" object="${companyshippingaddress}" z="iqKiv/EdqE9y0yuKxcN+kzjsQF4="/>
+        <field:display field="contactPerson" id="s_com_myshop_domain_CompanyShippingAddress_contactPerson" object="${companyshippingaddress}" z="ruuAEE7h7gJeGtVsDWhkVMiZAis="/>
+        <field:display field="telephone" id="s_com_myshop_domain_CompanyShippingAddress_telephone" object="${companyshippingaddress}" z="3pCayhDTaQ+6K2whN/AnwmIl9Sg="/>
+    </page:show>
+</div>

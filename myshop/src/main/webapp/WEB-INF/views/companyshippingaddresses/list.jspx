@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_CompanyShippingAddress" items="${companyshippingaddresses}" z="LzUMS3vV3q3FLx/KyxlFrt+96Yo=">
+        <table:table data="${companyshippingaddresses}" id="l_com_myshop_domain_CompanyShippingAddress" path="/companyshippingaddresses" z="ObrH7+D11Rzdye/V/JAZw7UH5cQ=">
+            <table:column id="c_com_myshop_domain_CompanyShippingAddress_street1" property="street1" z="V4HxVrKABxHGS5J8zZXRPdnHQYo="/>
+            <table:column id="c_com_myshop_domain_CompanyShippingAddress_street2" property="street2" z="sbnfAe1tlCohjh+e1Qc91kbqfKo="/>
+            <table:column id="c_com_myshop_domain_CompanyShippingAddress_city" property="city" z="yjC3Ppu7N9IRP4sSqnKaUumQjjE="/>
+            <table:column id="c_com_myshop_domain_CompanyShippingAddress_stateName" property="stateName" z="uv4MAqV4tVBWN6BxcYXqB+OI9EE="/>
+            <table:column id="c_com_myshop_domain_CompanyShippingAddress_zip" property="zip" z="2tR2OsTLzjSgzdsgSu93DIvPNpw="/>
+            <table:column id="c_com_myshop_domain_CompanyShippingAddress_country" property="country" z="SNunoPnCS1xgXM6YymzTCruevng="/>
+        </table:table>
+    </page:list>
+</div>

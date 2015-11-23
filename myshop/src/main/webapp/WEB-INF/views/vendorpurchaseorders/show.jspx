@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myshop_domain_VendorPurchaseOrder" object="${vendorpurchaseorder}" path="/vendorpurchaseorders" z="xi4soaC2cPH+Q2lfpd2Fbmzh1nI=">
+        <field:display field="vendor" id="s_com_myshop_domain_VendorPurchaseOrder_vendor" object="${vendorpurchaseorder}" z="lYIRRR1WY7X/BewfxVJfGdybM2Q="/>
+        <field:display field="warehouse" id="s_com_myshop_domain_VendorPurchaseOrder_warehouse" object="${vendorpurchaseorder}" z="Qx3xHSFSv48ELEbz3PIw2SSOyFo="/>
+        <field:display field="isStatusOpen" id="s_com_myshop_domain_VendorPurchaseOrder_isStatusOpen" object="${vendorpurchaseorder}" z="LHnZkRg/tqdEM4ka/fh2Md3Q46s="/>
+        <field:display field="note" id="s_com_myshop_domain_VendorPurchaseOrder_note" object="${vendorpurchaseorder}" z="o6XgTQqoTVnCshuh8rUfMmVNNys="/>
+    </page:show>
+</div>

@@ -29,19 +29,25 @@ privileged aspect VendorDataOnDemand_Roo_DataOnDemand {
     
     public Vendor VendorDataOnDemand.getNewTransientVendor(int index) {
         Vendor obj = new Vendor();
-        setPhoneNumber(obj, index);
-        setVendorName(obj, index);
+        setName(obj, index);
+        setNote(obj, index);
+        setWebsite(obj, index);
         return obj;
     }
     
-    public void VendorDataOnDemand.setPhoneNumber(Vendor obj, int index) {
-        String phoneNumber = "phoneNumber_" + index;
-        obj.setPhoneNumber(phoneNumber);
+    public void VendorDataOnDemand.setName(Vendor obj, int index) {
+        String Name = "Name_" + index;
+        obj.setName(Name);
     }
     
-    public void VendorDataOnDemand.setVendorName(Vendor obj, int index) {
-        String vendorName = "vendorName_" + index;
-        obj.setVendorName(vendorName);
+    public void VendorDataOnDemand.setNote(Vendor obj, int index) {
+        String note = "note_" + index;
+        obj.setNote(note);
+    }
+    
+    public void VendorDataOnDemand.setWebsite(Vendor obj, int index) {
+        String website = "website_" + index;
+        obj.setWebsite(website);
     }
     
     public Vendor VendorDataOnDemand.getSpecificVendor(int index) {

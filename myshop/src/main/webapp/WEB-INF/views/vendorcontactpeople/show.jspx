@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myshop_domain_VendorContactPerson" object="${vendorcontactperson}" path="/vendorcontactpeople" z="IFZfzxOptPrIE9VSyTFm0RqZfck=">
+        <field:display field="vendor" id="s_com_myshop_domain_VendorContactPerson_vendor" object="${vendorcontactperson}" z="deozdNMYLcxQddqOcaMbjS0+0hQ="/>
+        <field:display field="vendorPosition" id="s_com_myshop_domain_VendorContactPerson_vendorPosition" object="${vendorcontactperson}" z="M5In9YSfSLJPwq6euANydFhJW2A="/>
+        <field:display field="firstName" id="s_com_myshop_domain_VendorContactPerson_firstName" object="${vendorcontactperson}" z="BtEw1viv60vAoAMomY1u0/qH0jM="/>
+        <field:display field="lastName" id="s_com_myshop_domain_VendorContactPerson_lastName" object="${vendorcontactperson}" z="o2PxhFtXVQgDbeIko8XNBIJdkD4="/>
+        <field:display field="phone" id="s_com_myshop_domain_VendorContactPerson_phone" object="${vendorcontactperson}" z="fUoEMSEZ2X7aHXSeYPalV6y3+Yg="/>
+        <field:display field="mobile" id="s_com_myshop_domain_VendorContactPerson_mobile" object="${vendorcontactperson}" z="F4s/krRITDYhe2KI2WKXiS5qQIc="/>
+        <field:display field="email" id="s_com_myshop_domain_VendorContactPerson_email" object="${vendorcontactperson}" z="M6zBk4MuA6iPxlhbiYCsYo5Yc7w="/>
+        <field:display field="note" id="s_com_myshop_domain_VendorContactPerson_note" object="${vendorcontactperson}" z="knXMFkuDdqFZiI6BuZFkOgyHSmY="/>
+    </page:show>
+</div>

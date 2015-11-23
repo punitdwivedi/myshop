@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_myshop_domain_ProductInventory" object="${productinventory}" path="/productinventorys" z="ieKxY+d8S8KFC80mTxe2E7Xs/vc=">
+        <field:display field="productId" id="s_com_myshop_domain_ProductInventory_productId" object="${productinventory}" z="JC5jHPhQ2GSN6/uZDiGZ6O+9mZ0="/>
+        <field:display field="inventoryQty" id="s_com_myshop_domain_ProductInventory_inventoryQty" object="${productinventory}" z="bYLp2kWJXJG4e6oNrcSIB4XlNXQ="/>
+        <field:display field="warehouseNo" id="s_com_myshop_domain_ProductInventory_warehouseNo" object="${productinventory}" z="cdLNO7KXWXVJ+6T9dil1ZiccA9s="/>
+        <field:display field="roomNo" id="s_com_myshop_domain_ProductInventory_roomNo" object="${productinventory}" z="UkqqRYlob43MDFDqk64RnnCO1tA="/>
+        <field:display field="shelfNo" id="s_com_myshop_domain_ProductInventory_shelfNo" object="${productinventory}" z="LfDhGrlXMd7RC0VmMquFfjpc5eY="/>
+        <field:display field="seatNo" id="s_com_myshop_domain_ProductInventory_seatNo" object="${productinventory}" z="/Xj7296FYbc2g6L5OhhmOQdPmWs="/>
+    </page:show>
+</div>

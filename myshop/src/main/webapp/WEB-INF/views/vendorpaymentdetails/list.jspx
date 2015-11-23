@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_VendorPaymentDetail" items="${vendorpaymentdetails}" z="RSSrf9pr5MwptGgpvBOxs36K5WQ=">
+        <table:table data="${vendorpaymentdetails}" id="l_com_myshop_domain_VendorPaymentDetail" path="/vendorpaymentdetails" z="RArDPpy1V/fDj0qmuXG68vztBiE=">
+            <table:column id="c_com_myshop_domain_VendorPaymentDetail_vendorPaymentId" property="vendorPaymentId" z="X0wDJlp2fx8NGs1t4K4QLeRUGNU="/>
+            <table:column id="c_com_myshop_domain_VendorPaymentDetail_vendorPoLineNo" property="vendorPoLineNo" z="OE31hi3ypeQyE9MiyqTL3VluhXQ="/>
+            <table:column id="c_com_myshop_domain_VendorPaymentDetail_unitPrice" property="unitPrice" z="jqV04EYfBAYE+JFeLXPywUmzkmc="/>
+            <table:column id="c_com_myshop_domain_VendorPaymentDetail_qty" property="qty" z="wouQvUMFrDC1DnCIifQDRWC+9a0="/>
+        </table:table>
+    </page:list>
+</div>

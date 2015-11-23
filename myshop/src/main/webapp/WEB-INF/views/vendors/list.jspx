@@ -4,9 +4,10 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_com_myshop_domain_Vendor" items="${vendors}" z="lKTTfanhbKC2GMzT4EiMPGGFpU8=">
         <table:table data="${vendors}" id="l_com_myshop_domain_Vendor" path="/vendors" z="IwDRWTAfdrf8n0cGbPEO0jH8Hp8=">
-            <table:column id="c_com_myshop_domain_Vendor_paymentTerm" property="paymentTerm" z="YfVTaSRvtotKpllxa+N65/zB9n0="/>
-            <table:column id="c_com_myshop_domain_Vendor_vendorName" property="vendorName" z="5K1FpmgMPSS8EfqXq8RfxoNBgNM="/>
-            <table:column id="c_com_myshop_domain_Vendor_phoneNumber" property="phoneNumber" z="3Qr7bU0bIiHwECvtqxAsd2wOccA="/>
+            <table:column id="c_com_myshop_domain_Vendor_Name" property="name" z="TKe3lrlbaw3wAGW61gI4CqeBZIY="/>
+            <table:column id="c_com_myshop_domain_Vendor_PaymentTerm" property="paymentTerm" z="WJWII21A8QX/05mF7T1vrXvmnmk="/>
+            <table:column id="c_com_myshop_domain_Vendor_website" property="website" z="Eim/hV4WWAAQv9N99D+SrhiNwH8="/>
+            <table:column id="c_com_myshop_domain_Vendor_note" property="note" z="+fHSx/Q4JYnc1n65O7pxw83Oq9c="/>
         </table:table>
     </page:list>
 </div>
