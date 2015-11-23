@@ -339,3 +339,18 @@ field number --fieldName roomNo --type java.lang.Double
 field number --fieldName shelfNo --type java.lang.Double
 field number --fieldName seatNo --type java.lang.Double
 web mvc all --package ~.web
+entity jpa --class ~.domain.PaymentSent --testAutomatically
+field date --fieldName sentDate --type java.util.Date
+field number --fieldName amount --type java.lang.Double
+field string --fieldName refNo
+field boolean --fieldName isOpen
+field reference --fieldName paymentSentNo --type ~.domain.PaymentSent
+field string --fieldName invoiceOrCreditNo
+// [failed] field number --fieldName amount --type java.lang.Double
+field number --fieldName amountSent --type java.lang.Double
+web mvc all --package ~.web
+entity jpa --class ~.domain.PaymentSentDetail --testAutomatically
+field reference --fieldName paymentSentNo --type ~.domain.PaymentSent
+field string --fieldName invoiceOrCreditNo
+field number --fieldName amount --type java.lang.Double
+web mvc all --package ~.web

@@ -28,6 +28,12 @@
             <menu:item id="i_product_list" messageCode="global_menu_list" url="/products?page=1&amp;size=${empty param.size ? 10 : param.size}" z="kEeyCmUUYXShbDEWwOLheaAkM50="/>
             <menu:item id="i_productcategory_list" messageCode="global_menu_list" url="/productcategorys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="XTdMOaWp7VxTXox4oExorlB7gyw="/>
         </menu:category>
+        <menu:category id="c_productinventory" z="f/634svAw/deowpUNIHdLoniqIo=">
+			<menu:item id="i_productsreceived_new" messageCode="global_menu_new" url="/productsreceiveds?form" z="MjK9/OP5m8bK6OMn2bBmTtrC9Vg="/>
+			<menu:item id="i_productinventory_new" messageCode="global_menu_new" url="/productinventorys?form" z="5lAB/RCnTH6Iuctx3zBMWQxyLls="/>
+			<menu:item id="i_productsreceived_list" messageCode="global_menu_list" url="/productsreceiveds?page=1&amp;size=${empty param.size ? 10 : param.size}" z="OYMX0iNFcuS/r8NpcxObOzQOLYg="/>
+            <menu:item id="i_productinventory_list" messageCode="global_menu_list" url="/productinventorys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="2I/7Zkxv5k1l9edc9ys+pdxYqhM="/>
+        </menu:category>
         <menu:category id="c_customerpo" z="9evoRWEnyk9+CiYXNkhMynZ8hcg=">
             <menu:item id="i_customerpo_new" messageCode="global_menu_new" url="/custoes?form" z="fDrqKVyADY8sL0XEX7a0CxcYhoE="/>
             <menu:item id="i_customerpodetails_new" messageCode="global_menu_new" url="/customerpodetailses?form" z="5NN4UxBmFRO6WSw6haMczBjU5XY="/>
@@ -80,40 +86,12 @@
             <menu:item id="i_vendorpaymentdetail_list" messageCode="global_menu_list" url="/vendorpaymentdetails?page=1&amp;size=${empty param.size ? 10 : param.size}" z="R1/RGcu4KqHVJUSGYY9c2RNAY3A="/>
             <menu:item id="i_vendordebitmemo_list" messageCode="global_menu_list" url="/vendordebitmemoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="IKuK7jY91ygVFsXiAo7r4w8406U="/>
         </menu:category>
-        <menu:category id="c_customerinvoicedetails" z="7Mhlt98QJzo8dTVna0rXkn3XiJI="/>
-        <menu:category id="c_customercontact" z="/BNLKnilZLUvoWCeaDt9+6XJAjc="/>
-        <menu:category id="c_paymentterm" z="Vp/lcxuIPMYP+FUkHc9fs4s23B4=">
-            <menu:item id="i_paymentterm_new" messageCode="global_menu_new" url="/paymentterms?form" z="AmRB8Zy0qLt6zoTBMGS/Z688eus="/>
-            <menu:item id="i_paymentterm_list" messageCode="global_menu_list" url="/paymentterms?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MmBhv9C51lxLBbG11eepQ3UH+u4="/>
+        <menu:category id="c_paymentsent" z="P4tTWq/td3/5SKqEM3FNib3BvBI=">
+            <menu:item id="i_paymentsent_new" messageCode="global_menu_new" url="/paymentsents?form" z="Un+SfjvZjeM2RnDNud2lCEA/qxM="/>
+            <menu:item id="i_paymentsentdetail_new" messageCode="global_menu_new" url="/paymentsentdetails?form" z="oiU/vy/WPj33y5i1uCscNPNmOHo="/>
+            <menu:item id="i_paymentsent_list" messageCode="global_menu_list" url="/paymentsents?page=1&amp;size=${empty param.size ? 10 : param.size}" z="FRd4z7b8ShWphiNE28d9jaeXTzg="/>
+            <menu:item id="i_paymentsentdetail_list" messageCode="global_menu_list" url="/paymentsentdetails?page=1&amp;size=${empty param.size ? 10 : param.size}" z="o0b6ZHQ5Uh18+UvLcPkgws2Mf1s="/>   
         </menu:category>
-        <menu:category id="c_customerpaymentdetail" z="aragCV5c3ax6EpBrGc3MqK2yMbg="/>
-        <menu:category id="c_shipment" z="U7fbISl5mbUv7w3RhhG2yNd60+0="/>
-        <menu:category id="c_customerinvoice" z="FD3WQo9YsGYSqg3mFD3TM2RCVqQ="/>
-        <menu:category id="c_addresstype" z="k9f9zhAkVCbD2xX11ggEcBKSHHo=">
-            <menu:item id="i_addresstype_new" messageCode="global_menu_new" url="/addresstypes?form" z="dmgw+9P08yyVT1PoQ7Nzu3RBIq0="/>
-            <menu:item id="i_addresstype_list" messageCode="global_menu_list" url="/addresstypes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="gjjCaizU3WRI570NJXkfjJuztrI="/>
-        </menu:category>
-        <menu:category id="c_vendoraddress" z="4wLkc+kCjBkmBmKCFv4YmWEe520="/>
-        <menu:category id="c_customerpodetails" z="rMld6k6ZtkYu9YzCp2jRp7uDpgM="/>
-        <menu:category id="c_customeraddress" z="r3nvj8vcAP9GrXu5KOpo+vMjdLc="/>
-        <menu:category id="c_productcategory" z="hzz0b9xJhhfHLP7k2OSh9dwWf6w="/>
-        <menu:category id="c_saleschanneltranasaction" z="o3ht749jdrEMCOtUdnaEXzc50ok="/>
-        <menu:category id="c_companyshippingaddress" z="4uOGFW0Ty2qduOCQFdwE0m+Pog4="/>
-        <menu:category id="c_customerpodelivery" z="tghGv4zzimFGkHz3Gh1SInj/ha4="/>
-        <menu:category id="c_customercreditmemo" z="bfGNbALJUqc7tm+QyDESnVlmyM0="/>
-        <menu:category id="c_vendorpaymentdetail" z="56MvW1Imf8oZoTJ7nJREj+WpFFo="/>
-        <menu:category id="c_vendorpodetail" z="rPPhVtopEzjYwGHCenRbnlZZABM="/>
-        <menu:category id="c_customerpayment" z="P0PBQdepuDSTZyKUzRVkIegzxxM="/>
-        <menu:category id="c_shipmentdetails" z="9rKjmX/trMw4azmg+4RxbBUfQoQ="/>
-        <menu:category id="c_vendorcontactperson" z="sJVJBQzI482CzCS2JqNawXbDHls="/>
-        <menu:category id="c_vendordebitmemo" z="o6T0VRZIPQmY4+djbOi/PogtCoA="/>
-        <menu:category id="c_productsreceived" z="V+iUr9z+GLIte2bF4O/ewJ6KkLo=">
-            <menu:item id="i_productsreceived_new" messageCode="global_menu_new" url="/productsreceiveds?form" z="MjK9/OP5m8bK6OMn2bBmTtrC9Vg="/>
-            <menu:item id="i_productsreceived_list" messageCode="global_menu_list" url="/productsreceiveds?page=1&amp;size=${empty param.size ? 10 : param.size}" z="OYMX0iNFcuS/r8NpcxObOzQOLYg="/>
-        </menu:category>
-        <menu:category id="c_productinventory" z="f/634svAw/deowpUNIHdLoniqIo=">
-            <menu:item id="i_productinventory_new" messageCode="global_menu_new" url="/productinventorys?form" z="5lAB/RCnTH6Iuctx3zBMWQxyLls="/>
-            <menu:item id="i_productinventory_list" messageCode="global_menu_list" url="/productinventorys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="2I/7Zkxv5k1l9edc9ys+pdxYqhM="/>
-        </menu:category>
+
     </menu:menu>
 </div>

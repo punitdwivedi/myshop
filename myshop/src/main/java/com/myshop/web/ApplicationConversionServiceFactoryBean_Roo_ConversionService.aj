@@ -17,6 +17,8 @@ import com.myshop.domain.CustomerPayment;
 import com.myshop.domain.CustomerPaymentDetail;
 import com.myshop.domain.CustomerPoDelivery;
 import com.myshop.domain.CustomerPoDetails;
+import com.myshop.domain.PaymentSent;
+import com.myshop.domain.PaymentSentDetail;
 import com.myshop.domain.PaymentTerm;
 import com.myshop.domain.Product;
 import com.myshop.domain.ProductCategory;
@@ -376,6 +378,54 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.CustomerPoDetails>() {
             public com.myshop.domain.CustomerPoDetails convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), CustomerPoDetails.class);
+            }
+        };
+    }
+    
+    public Converter<PaymentSent, String> ApplicationConversionServiceFactoryBean.getPaymentSentToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.PaymentSent, java.lang.String>() {
+            public String convert(PaymentSent paymentSent) {
+                return new StringBuilder().append(paymentSent.getSentDate()).append(' ').append(paymentSent.getAmount()).append(' ').append(paymentSent.getRefNo()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, PaymentSent> ApplicationConversionServiceFactoryBean.getIdToPaymentSentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.PaymentSent>() {
+            public com.myshop.domain.PaymentSent convert(java.lang.Long id) {
+                return PaymentSent.findPaymentSent(id);
+            }
+        };
+    }
+    
+    public Converter<String, PaymentSent> ApplicationConversionServiceFactoryBean.getStringToPaymentSentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.PaymentSent>() {
+            public com.myshop.domain.PaymentSent convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), PaymentSent.class);
+            }
+        };
+    }
+    
+    public Converter<PaymentSentDetail, String> ApplicationConversionServiceFactoryBean.getPaymentSentDetailToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.PaymentSentDetail, java.lang.String>() {
+            public String convert(PaymentSentDetail paymentSentDetail) {
+                return new StringBuilder().append(paymentSentDetail.getInvoiceOrCreditNo()).append(' ').append(paymentSentDetail.getAmount()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, PaymentSentDetail> ApplicationConversionServiceFactoryBean.getIdToPaymentSentDetailConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.PaymentSentDetail>() {
+            public com.myshop.domain.PaymentSentDetail convert(java.lang.Long id) {
+                return PaymentSentDetail.findPaymentSentDetail(id);
+            }
+        };
+    }
+    
+    public Converter<String, PaymentSentDetail> ApplicationConversionServiceFactoryBean.getStringToPaymentSentDetailConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.PaymentSentDetail>() {
+            public com.myshop.domain.PaymentSentDetail convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), PaymentSentDetail.class);
             }
         };
     }
@@ -855,6 +905,12 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getCustomerPoDetailsToStringConverter());
         registry.addConverter(getIdToCustomerPoDetailsConverter());
         registry.addConverter(getStringToCustomerPoDetailsConverter());
+        registry.addConverter(getPaymentSentToStringConverter());
+        registry.addConverter(getIdToPaymentSentConverter());
+        registry.addConverter(getStringToPaymentSentConverter());
+        registry.addConverter(getPaymentSentDetailToStringConverter());
+        registry.addConverter(getIdToPaymentSentDetailConverter());
+        registry.addConverter(getStringToPaymentSentDetailConverter());
         registry.addConverter(getPaymentTermToStringConverter());
         registry.addConverter(getIdToPaymentTermConverter());
         registry.addConverter(getStringToPaymentTermConverter());

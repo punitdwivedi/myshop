@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_myshop_domain_PaymentSentDetail" items="${paymentsentdetails}" z="lxS0kT8rG5/fGye7JJoM0P7qurk=">
+        <table:table data="${paymentsentdetails}" id="l_com_myshop_domain_PaymentSentDetail" path="/paymentsentdetails" z="y2r8xVqJ6amRkH0lFSnjsSIeXEE=">
+            <table:column id="c_com_myshop_domain_PaymentSentDetail_paymentSentNo" property="paymentSentNo" z="NA1+D7rQAIHyDSiNWkf8NUMfXRM="/>
+            <table:column id="c_com_myshop_domain_PaymentSentDetail_invoiceOrCreditNo" property="invoiceOrCreditNo" z="zb8pbImsFCfs8nxVC9cc8fUFpOo="/>
+            <table:column id="c_com_myshop_domain_PaymentSentDetail_amount" property="amount" z="Pc/2OGXRAf3ihPQIQG2sNPrpkQY="/>
+        </table:table>
+    </page:list>
+</div>
