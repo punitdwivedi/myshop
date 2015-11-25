@@ -5,8 +5,12 @@ import org.springframework.roo.addon.tostring.RooToString;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.hibernate.validator.constraints.Email;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @RooJavaBean
@@ -18,7 +22,15 @@ public class Users {
      */
     @NotNull
     @Size(min = 6)
+    @Column(unique=true)    
+    @Email
     private String emailAddress;
+    
+    /**
+     */
+    @NotNull
+    @Size(min = 6)
+    private String password;
 
     /**
      */

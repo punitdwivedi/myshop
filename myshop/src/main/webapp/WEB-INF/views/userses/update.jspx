@@ -13,5 +13,6 @@
         <field:checkbox field="enable" id="c_com_myshop_domain_Users_enable" z="2UYv8XF3QmjlPgQ1v+dgWhb12Uw="/>
         <field:checkbox field="isOwner" id="c_com_myshop_domain_Users_isOwner" z="Tz/hKo0slH8nvro7osBAJjjI1qw="/>
         <field:input field="jobTitle" id="c_com_myshop_domain_Users_jobTitle" required="true" z="clDX4UXu53cbxs6Rd9gg9YGXKyQ="/>
+        <field:input field="password" id="c_com_myshop_domain_Users_password" min="6" required="true" z="dhDVoT3pLQZYqiUOc1mHt5sNJZ4="/>
     </form:update>
 </div>

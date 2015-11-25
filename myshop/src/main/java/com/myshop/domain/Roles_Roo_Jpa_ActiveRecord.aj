@@ -3,97 +3,97 @@
 
 package com.myshop.domain;
 
-import com.myshop.domain.Users;
+import com.myshop.domain.Roles;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.springframework.transaction.annotation.Transactional;
 
-privileged aspect Users_Roo_Jpa_ActiveRecord {
+privileged aspect Roles_Roo_Jpa_ActiveRecord {
     
     @PersistenceContext
-    transient EntityManager Users.entityManager;
+    transient EntityManager Roles.entityManager;
     
-    public static final List<String> Users.fieldNames4OrderClauseFilter = java.util.Arrays.asList("emailAddress", "password", "firstName", "lastName", "mobile", "phone", "dob", "note", "enable", "isOwner", "jobTitle");
+    public static final List<String> Roles.fieldNames4OrderClauseFilter = java.util.Arrays.asList("roleName");
     
-    public static final EntityManager Users.entityManager() {
-        EntityManager em = new Users().entityManager;
+    public static final EntityManager Roles.entityManager() {
+        EntityManager em = new Roles().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
         return em;
     }
     
-    public static long Users.countUserses() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM Users o", Long.class).getSingleResult();
+    public static long Roles.countRoleses() {
+        return entityManager().createQuery("SELECT COUNT(o) FROM Roles o", Long.class).getSingleResult();
     }
     
-    public static List<Users> Users.findAllUserses() {
-        return entityManager().createQuery("SELECT o FROM Users o", Users.class).getResultList();
+    public static List<Roles> Roles.findAllRoleses() {
+        return entityManager().createQuery("SELECT o FROM Roles o", Roles.class).getResultList();
     }
     
-    public static List<Users> Users.findAllUserses(String sortFieldName, String sortOrder) {
-        String jpaQuery = "SELECT o FROM Users o";
+    public static List<Roles> Roles.findAllRoleses(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM Roles o";
         if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
             jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
             if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
                 jpaQuery = jpaQuery + " " + sortOrder;
             }
         }
-        return entityManager().createQuery(jpaQuery, Users.class).getResultList();
+        return entityManager().createQuery(jpaQuery, Roles.class).getResultList();
     }
     
-    public static Users Users.findUsers(Long id) {
+    public static Roles Roles.findRoles(Long id) {
         if (id == null) return null;
-        return entityManager().find(Users.class, id);
+        return entityManager().find(Roles.class, id);
     }
     
-    public static List<Users> Users.findUsersEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("SELECT o FROM Users o", Users.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    public static List<Roles> Roles.findRolesEntries(int firstResult, int maxResults) {
+        return entityManager().createQuery("SELECT o FROM Roles o", Roles.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
-    public static List<Users> Users.findUsersEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
-        String jpaQuery = "SELECT o FROM Users o";
+    public static List<Roles> Roles.findRolesEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM Roles o";
         if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
             jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
             if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
                 jpaQuery = jpaQuery + " " + sortOrder;
             }
         }
-        return entityManager().createQuery(jpaQuery, Users.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+        return entityManager().createQuery(jpaQuery, Roles.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional
-    public void Users.persist() {
+    public void Roles.persist() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.persist(this);
     }
     
     @Transactional
-    public void Users.remove() {
+    public void Roles.remove() {
         if (this.entityManager == null) this.entityManager = entityManager();
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Users attached = Users.findUsers(this.id);
+            Roles attached = Roles.findRoles(this.id);
             this.entityManager.remove(attached);
         }
     }
     
     @Transactional
-    public void Users.flush() {
+    public void Roles.flush() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.flush();
     }
     
     @Transactional
-    public void Users.clear() {
+    public void Roles.clear() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.clear();
     }
     
     @Transactional
-    public Users Users.merge() {
+    public Roles Roles.merge() {
         if (this.entityManager == null) this.entityManager = entityManager();
-        Users merged = this.entityManager.merge(this);
+        Roles merged = this.entityManager.merge(this);
         this.entityManager.flush();
         return merged;
     }

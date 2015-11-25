@@ -9,7 +9,7 @@
             <table:column id="c_com_myshop_domain_Users_lastName" property="lastName" z="cDnSFpqbekmkp8J+66ekbdPtNm0="/>
             <table:column id="c_com_myshop_domain_Users_mobile" property="mobile" z="o4KuGhOJT8DIDl6IH8J1YNkJbFE="/>
             <table:column id="c_com_myshop_domain_Users_phone" property="phone" z="Zj1LAhCROCr4TEG56widLtjAN3M="/>
-            <table:column date="true" dateTimePattern="${users_dob_date_format}" id="c_com_myshop_domain_Users_dob" property="dob" z="79iZIw5d3lfzXqSFrPJG4h9aV8M="/>
+            <table:column id="c_com_myshop_domain_Users_password" property="password" z="9V8PL2jkvXG/QLhse0+akMF5KbM="/>
         </table:table>
     </page:list>
 </div>

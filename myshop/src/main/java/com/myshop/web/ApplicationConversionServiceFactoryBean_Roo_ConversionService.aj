@@ -24,10 +24,12 @@ import com.myshop.domain.Product;
 import com.myshop.domain.ProductCategory;
 import com.myshop.domain.ProductInventory;
 import com.myshop.domain.ProductsReceived;
+import com.myshop.domain.Roles;
 import com.myshop.domain.SalesChannel;
 import com.myshop.domain.SalesChannelTranasaction;
 import com.myshop.domain.Shipment;
 import com.myshop.domain.ShipmentDetails;
+import com.myshop.domain.UserRole;
 import com.myshop.domain.Users;
 import com.myshop.domain.Vendor;
 import com.myshop.domain.VendorAddress;
@@ -550,6 +552,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<Roles, String> ApplicationConversionServiceFactoryBean.getRolesToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.Roles, java.lang.String>() {
+            public String convert(Roles roles) {
+                return new StringBuilder().append(roles.getRoleName()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Roles> ApplicationConversionServiceFactoryBean.getIdToRolesConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.Roles>() {
+            public com.myshop.domain.Roles convert(java.lang.Long id) {
+                return Roles.findRoles(id);
+            }
+        };
+    }
+    
+    public Converter<String, Roles> ApplicationConversionServiceFactoryBean.getStringToRolesConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.Roles>() {
+            public com.myshop.domain.Roles convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Roles.class);
+            }
+        };
+    }
+    
     public Converter<SalesChannel, String> ApplicationConversionServiceFactoryBean.getSalesChannelToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.myshop.domain.SalesChannel, java.lang.String>() {
             public String convert(SalesChannel salesChannel) {
@@ -646,10 +672,34 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<UserRole, String> ApplicationConversionServiceFactoryBean.getUserRoleToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.myshop.domain.UserRole, java.lang.String>() {
+            public String convert(UserRole userRole) {
+                return "(no displayable fields)";
+            }
+        };
+    }
+    
+    public Converter<Long, UserRole> ApplicationConversionServiceFactoryBean.getIdToUserRoleConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.myshop.domain.UserRole>() {
+            public com.myshop.domain.UserRole convert(java.lang.Long id) {
+                return UserRole.findUserRole(id);
+            }
+        };
+    }
+    
+    public Converter<String, UserRole> ApplicationConversionServiceFactoryBean.getStringToUserRoleConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.myshop.domain.UserRole>() {
+            public com.myshop.domain.UserRole convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), UserRole.class);
+            }
+        };
+    }
+    
     public Converter<Users, String> ApplicationConversionServiceFactoryBean.getUsersToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.myshop.domain.Users, java.lang.String>() {
             public String convert(Users users) {
-                return new StringBuilder().append(users.getEmailAddress()).append(' ').append(users.getFirstName()).append(' ').append(users.getLastName()).append(' ').append(users.getMobile()).toString();
+                return new StringBuilder().append(users.getEmailAddress()).append(' ').append(users.getPassword()).append(' ').append(users.getFirstName()).append(' ').append(users.getLastName()).toString();
             }
         };
     }
@@ -926,6 +976,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getProductsReceivedToStringConverter());
         registry.addConverter(getIdToProductsReceivedConverter());
         registry.addConverter(getStringToProductsReceivedConverter());
+        registry.addConverter(getRolesToStringConverter());
+        registry.addConverter(getIdToRolesConverter());
+        registry.addConverter(getStringToRolesConverter());
         registry.addConverter(getSalesChannelToStringConverter());
         registry.addConverter(getIdToSalesChannelConverter());
         registry.addConverter(getStringToSalesChannelConverter());
@@ -938,6 +991,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getShipmentDetailsToStringConverter());
         registry.addConverter(getIdToShipmentDetailsConverter());
         registry.addConverter(getStringToShipmentDetailsConverter());
+        registry.addConverter(getUserRoleToStringConverter());
+        registry.addConverter(getIdToUserRoleConverter());
+        registry.addConverter(getStringToUserRoleConverter());
         registry.addConverter(getUsersToStringConverter());
         registry.addConverter(getIdToUsersConverter());
         registry.addConverter(getStringToUsersConverter());

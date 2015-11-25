@@ -354,3 +354,17 @@ field reference --fieldName paymentSentNo --type ~.domain.PaymentSent
 field string --fieldName invoiceOrCreditNo
 field number --fieldName amount --type java.lang.Double
 web mvc all --package ~.web
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2015-11-24 09:08:36
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-11-24 18:52:54
+entity jpa --class ~.domain.Roles --testAutomatically
+field string --fieldName roleName --notNull 
+entity jpa --class ~.domain.UserRole --testAutomatically
+field reference --fieldName roleId --type ~.domain.Roles
+field reference --fieldName userId --type ~.domain.Users
+web mvc all --package ~.web
+security setup
+web mvc all --package ~.web
+// [failed] perform package 
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2015-11-24 19:30:37
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-11-24 19:30:50
+web mvc all --package ~.web

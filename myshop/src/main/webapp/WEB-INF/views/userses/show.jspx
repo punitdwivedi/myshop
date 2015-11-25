@@ -13,5 +13,6 @@
         <field:display field="enable" id="s_com_myshop_domain_Users_enable" object="${users}" z="67QAPZEzvU/f6Q4XkoPAyaC/OpU="/>
         <field:display field="isOwner" id="s_com_myshop_domain_Users_isOwner" object="${users}" z="8PosYB5rfzPgSIXRe8cXcX4HCFI="/>
         <field:display field="jobTitle" id="s_com_myshop_domain_Users_jobTitle" object="${users}" z="9L+A4V69JmXXKDBrC9ahPzDMNb0="/>
+        <field:display field="password" id="s_com_myshop_domain_Users_password" object="${users}" z="xZqalzQk9xDonSw/aD5Emum8ZIs="/>
     </page:show>
 </div>

@@ -36,6 +36,7 @@ privileged aspect UsersDataOnDemand_Roo_DataOnDemand {
         setLastName(obj, index);
         setMobile(obj, index);
         setNote(obj, index);
+        setPassword(obj, index);
         setPhone(obj, index);
         return obj;
     }
@@ -83,6 +84,11 @@ privileged aspect UsersDataOnDemand_Roo_DataOnDemand {
     public void UsersDataOnDemand.setNote(Users obj, int index) {
         String note = "note_" + index;
         obj.setNote(note);
+    }
+    
+    public void UsersDataOnDemand.setPassword(Users obj, int index) {
+        String password = "password_" + index;
+        obj.setPassword(password);
     }
     
     public void UsersDataOnDemand.setPhone(Users obj, int index) {

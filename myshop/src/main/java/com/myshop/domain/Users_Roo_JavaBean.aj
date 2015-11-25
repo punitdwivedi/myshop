@@ -16,6 +16,14 @@ privileged aspect Users_Roo_JavaBean {
         this.emailAddress = emailAddress;
     }
     
+    public String Users.getPassword() {
+        return this.password;
+    }
+    
+    public void Users.setPassword(String password) {
+        this.password = password;
+    }
+    
     public String Users.getFirstName() {
         return this.firstName;
     }
