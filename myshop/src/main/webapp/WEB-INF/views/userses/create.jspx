@@ -4,7 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_myshop_domain_Users" modelAttribute="users" path="/userses" render="${empty dependencies}" z="ZazSg2POJmElP4Ut6W9bMTJy7sU=">
         <field:input field="emailAddress" id="c_com_myshop_domain_Users_emailAddress" min="6" required="true" validationMessageCode="field_invalid_email" z="L4UuiVSmgT8AzIZRTFCSKZ8yeYQ="/>
-        <field:input field="password" type="password" id="c_com_myshop_domain_Users_password" min="6" required="true" z="dhDVoT3pLQZYqiUOc1mHt5sNJZ4="/>
+        <field:input field="password" id="c_com_myshop_domain_Users_password" min="6" required="true" type="password" z="user-managed"/>
         <field:input field="firstName" id="c_com_myshop_domain_Users_firstName" min="3" required="true" z="ddeDo0xcO3xlr2EdfFFGvYMIWeY="/>
         <field:input field="lastName" id="c_com_myshop_domain_Users_lastName" min="3" required="true" z="4eHAzAoBqtSyvD8Rs25dUeur3RQ="/>
         <field:input field="mobile" id="c_com_myshop_domain_Users_mobile" min="10" required="true" z="wyuvIwn65AI/tHxe+scm4hcCSbQ="/>

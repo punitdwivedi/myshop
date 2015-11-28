@@ -14,7 +14,7 @@ privileged aspect CustomerPO_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager CustomerPO.entityManager;
     
-    public static final List<String> CustomerPO.fieldNames4OrderClauseFilter = java.util.Arrays.asList("shippingAddressId", "orderIsOpen", "note");
+    public static final List<String> CustomerPO.fieldNames4OrderClauseFilter = java.util.Arrays.asList("shippingAddressId", "orderIsOpen", "note", "customerId");
     
     public static final EntityManager CustomerPO.entityManager() {
         EntityManager em = new CustomerPO().entityManager;

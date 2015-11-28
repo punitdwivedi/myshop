@@ -7,6 +7,7 @@
             <table:column id="c_com_myshop_domain_CustomerPO_shippingAddressId" property="shippingAddressId" z="XD9MjTJZFBiMjV0mRXoOTSWsJDE="/>
             <table:column id="c_com_myshop_domain_CustomerPO_orderIsOpen" property="orderIsOpen" z="E1BaFdWDTXDMU7OOmWO5K4Z7+vA="/>
             <table:column id="c_com_myshop_domain_CustomerPO_note" property="note" z="xdoZmIXI2JF+2EjHKu3x5TZlXTE="/>
+            <table:column id="c_com_myshop_domain_CustomerPO_customerId" property="customerId" z="atSwkS8ZVv2fwL02cKahUjby6Pg="/>
         </table:table>
     </page:list>
 </div>

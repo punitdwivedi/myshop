@@ -21,4 +21,9 @@ public class CustomerPO {
     /**
      */
     private String note;
+    
+    /**
+     */
+    @ManyToOne
+    private Customer customerId;
 }

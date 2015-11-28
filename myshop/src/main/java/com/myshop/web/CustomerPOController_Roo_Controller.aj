@@ -4,6 +4,7 @@
 package com.myshop.web;
 
 import com.myshop.domain.Address;
+import com.myshop.domain.Customer;
 import com.myshop.domain.CustomerPO;
 import com.myshop.web.CustomerPOController;
 import java.io.UnsupportedEncodingException;
@@ -88,6 +89,7 @@ privileged aspect CustomerPOController_Roo_Controller {
     void CustomerPOController.populateEditForm(Model uiModel, CustomerPO customerPO) {
         uiModel.addAttribute("customerPO", customerPO);
         uiModel.addAttribute("addresses", Address.findAllAddresses());
+        uiModel.addAttribute("customers", Customer.findAllCustomers());
     }
     
     String CustomerPOController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

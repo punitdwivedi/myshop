@@ -5,6 +5,8 @@ package com.myshop.domain;
 
 import com.myshop.domain.CustomerPoDelivery;
 import com.myshop.domain.CustomerPoDetails;
+import com.myshop.domain.Shipment;
+import com.myshop.domain.ShipmentDetails;
 import java.util.Date;
 
 privileged aspect CustomerPoDelivery_Roo_JavaBean {
@@ -33,19 +35,19 @@ privileged aspect CustomerPoDelivery_Roo_JavaBean {
         this.shipOutQuantity = shipOutQuantity;
     }
     
-    public Integer CustomerPoDelivery.getShipmentId() {
+    public Shipment CustomerPoDelivery.getShipmentId() {
         return this.shipmentId;
     }
     
-    public void CustomerPoDelivery.setShipmentId(Integer shipmentId) {
+    public void CustomerPoDelivery.setShipmentId(Shipment shipmentId) {
         this.shipmentId = shipmentId;
     }
     
-    public Integer CustomerPoDelivery.getShipmentLineNo() {
+    public ShipmentDetails CustomerPoDelivery.getShipmentLineNo() {
         return this.shipmentLineNo;
     }
     
-    public void CustomerPoDelivery.setShipmentLineNo(Integer shipmentLineNo) {
+    public void CustomerPoDelivery.setShipmentLineNo(ShipmentDetails shipmentLineNo) {
         this.shipmentLineNo = shipmentLineNo;
     }
     

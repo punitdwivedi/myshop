@@ -5,6 +5,8 @@ package com.myshop.web;
 
 import com.myshop.domain.CustomerPoDelivery;
 import com.myshop.domain.CustomerPoDetails;
+import com.myshop.domain.Shipment;
+import com.myshop.domain.ShipmentDetails;
 import com.myshop.web.CustomerPoDeliveryController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
@@ -97,6 +99,8 @@ privileged aspect CustomerPoDeliveryController_Roo_Controller {
         uiModel.addAttribute("customerPoDelivery", customerPoDelivery);
         addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("customerpodetailses", CustomerPoDetails.findAllCustomerPoDetailses());
+        uiModel.addAttribute("shipments", Shipment.findAllShipments());
+        uiModel.addAttribute("shipmentdetailses", ShipmentDetails.findAllShipmentDetailses());
     }
     
     String CustomerPoDeliveryController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

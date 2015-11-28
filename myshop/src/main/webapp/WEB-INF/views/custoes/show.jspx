@@ -6,5 +6,6 @@
         <field:display field="shippingAddressId" id="s_com_myshop_domain_CustomerPO_shippingAddressId" object="${customerpo}" z="pYPnb0KX5EFn6T+9LCeiofgEgbw="/>
         <field:display field="orderIsOpen" id="s_com_myshop_domain_CustomerPO_orderIsOpen" object="${customerpo}" z="2jz+EAb+ru95A1UUEAFewHarUO0="/>
         <field:display field="note" id="s_com_myshop_domain_CustomerPO_note" object="${customerpo}" z="w7unEHJyeFWDmGih/UAIxOe9KOE="/>
+        <field:display field="customerId" id="s_com_myshop_domain_CustomerPO_customerId" object="${customerpo}" z="e1T1hD/38FX1okyf06R1B2/rmpE="/>
     </page:show>
 </div>

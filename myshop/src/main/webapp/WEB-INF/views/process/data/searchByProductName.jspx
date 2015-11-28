@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core"  xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
+xmlns:form="http://www.springframework.org/tags/form" version="2.0">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <jsp:output omit-xml-declaration="yes"/>
+  <spring:message code="label_process_data_index" htmlEscape="false" var="title"/>
+  <util:panel id="title" title="${title}">
+    <spring:message code="application_name" htmlEscape="false" var="app_name"/>
+      <spring:message arguments="${app_name}" code="search_pannel_name_product"/>
+      <table>
+      	<tr> 
+      	  <c:url var="actionURL" value="/process/data/searchByProduct" />
+      		<form:form method="POST" action="${actionURL}" modelAttribute="filterData">	
+	      		<td>Product Name: <form:input path="productName"/></td>
+	      		<td>Start Date: <form:input path="startDate"/></td>
+	      		<td>End Date: <form:input path="endDate"/></td>
+	      		<td><input type="submit" value="Search"/></td>
+      		</form:form>
+      	</tr>
+      	</table>
+      	<TABLE>
+      	<thead>
+      	<tr>
+      		<th>Product Id</th>
+      		<th>Product Name</th>
+      		<th>Product Image</th>
+      		<th>Size(h x l)</th>
+      		<th>Weight</th>
+      		<th>Inventory Qty.</th>
+      		<th>Room No.</th>
+      		<th>Seat No.</th>
+      		<th>Self No.</th>
+      		<th>Warehouse No.</th>
+      		<th>Customer Required Date</th>
+      		<th>Customer Order Qty.</th>      		
+      		<th>Vendor Required Date</th>
+      		<th>Vendor Order Qty.</th>
+      	</tr>
+      	</thead>
+      	<c:forEach var="searchResultDTO" items="${searchByProductNameResultDTOList}">
+      		<tr>
+	      		<td>${searchResultDTO.id}</td>
+	      		<td>${searchResultDTO.productName}</td>
+	      		<td>${searchResultDTO.productImageName}</td>
+	      		<td>${searchResultDTO.height} x ${searchResultDTO.length}  </td>    
+	      		<td>${searchResultDTO.weight}</td>    
+	      		<td>${searchResultDTO.inventoryQty}</td>
+	      		<td>${searchResultDTO.roomNo}</td>    
+	      		<td>${searchResultDTO.seatNo}</td>
+	      		<td>${searchResultDTO.shelfNo}</td>    
+	      		<td>${searchResultDTO.wareHouseNo}</td>
+	      		<td>${searchResultDTO.customerRequiredDate}</td>    	      		
+	      		<td>${searchResultDTO.customerOrderQty}</td> 
+	      		<td>${searchResultDTO.vendorRequiredDate}</td>   
+	      		<td>${searchResultDTO.vendorOrderQty}</td>
+	      		
+	      	</tr>
+      	</c:forEach>
+      </TABLE>
+      
+        <c:if test="${not empty customSoldProducts}">      
+	      	<TABLE>
+	      	
+	      	<thead>
+		      	<tr><th colspan="3">Sold Custom Products</th></tr>
+		      	<tr>
+		      		<th>Shipping Date</th>
+		      		<th>Quantity</th>
+		      		<th>Customer</th>
+		      		
+		      	</tr>
+	      	</thead>
+	      	<c:forEach var="searchResultDTO" items="${customSoldProducts}">
+	      		<tr>
+		      		<td>${searchResultDTO.soldDate}</td>
+		      		<td>${searchResultDTO.quantity}</td>
+		      		<td>${searchResultDTO.channel}</td>
+		      	</tr>
+	      	</c:forEach>
+	      </TABLE>   
+      </c:if>   
+      <br/><br/>
+      
+      <c:if test="${not empty nonCustomSoldProducts}">      
+	      	<TABLE>
+		      	<thead>
+			      	<tr><th colspan="3">Sold Non-custom Products</th></tr>
+			      	<tr>
+			      		<th>Sold Date</th>
+			      		<th>Quantity</th>
+			      		<th>Sales Channel Name</th>
+			      		
+			      	</tr>
+		      	</thead>
+	      	<c:forEach var="searchResultDTO" items="${nonCustomSoldProducts}">
+	      		<tr>
+		      		<td>${searchResultDTO.soldDate}</td>
+		      		<td>${searchResultDTO.quantity}</td>
+		      		<td>${searchResultDTO.channel}</td>
+		      	</tr>
+	      	</c:forEach>
+	      </TABLE>   
+      </c:if>     
+  </util:panel>
+</div>

@@ -6,6 +6,8 @@ package com.myshop.domain;
 import com.myshop.domain.CustomerPoDelivery;
 import com.myshop.domain.CustomerPoDeliveryDataOnDemand;
 import com.myshop.domain.CustomerPoDetailsDataOnDemand;
+import com.myshop.domain.ShipmentDataOnDemand;
+import com.myshop.domain.ShipmentDetailsDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -30,12 +32,16 @@ privileged aspect CustomerPoDeliveryDataOnDemand_Roo_DataOnDemand {
     @Autowired
     CustomerPoDetailsDataOnDemand CustomerPoDeliveryDataOnDemand.customerPoDetailsDataOnDemand;
     
+    @Autowired
+    ShipmentDataOnDemand CustomerPoDeliveryDataOnDemand.shipmentDataOnDemand;
+    
+    @Autowired
+    ShipmentDetailsDataOnDemand CustomerPoDeliveryDataOnDemand.shipmentDetailsDataOnDemand;
+    
     public CustomerPoDelivery CustomerPoDeliveryDataOnDemand.getNewTransientCustomerPoDelivery(int index) {
         CustomerPoDelivery obj = new CustomerPoDelivery();
         setShipOutDate(obj, index);
         setShipOutQuantity(obj, index);
-        setShipmentId(obj, index);
-        setShipmentLineNo(obj, index);
         return obj;
     }
     
@@ -47,16 +53,6 @@ privileged aspect CustomerPoDeliveryDataOnDemand_Roo_DataOnDemand {
     public void CustomerPoDeliveryDataOnDemand.setShipOutQuantity(CustomerPoDelivery obj, int index) {
         Double shipOutQuantity = new Integer(index).doubleValue();
         obj.setShipOutQuantity(shipOutQuantity);
-    }
-    
-    public void CustomerPoDeliveryDataOnDemand.setShipmentId(CustomerPoDelivery obj, int index) {
-        Integer shipmentId = new Integer(index);
-        obj.setShipmentId(shipmentId);
-    }
-    
-    public void CustomerPoDeliveryDataOnDemand.setShipmentLineNo(CustomerPoDelivery obj, int index) {
-        Integer shipmentLineNo = new Integer(index);
-        obj.setShipmentLineNo(shipmentLineNo);
     }
     
     public CustomerPoDelivery CustomerPoDeliveryDataOnDemand.getSpecificCustomerPoDelivery(int index) {

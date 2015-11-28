@@ -6,6 +6,7 @@
         <field:select field="shippingAddressId" id="c_com_myshop_domain_CustomerPO_shippingAddressId" itemValue="id" items="${addresses}" path="/addresses" z="ygOY096Fh5febZ5TTZhjAqa2U7M="/>
         <field:checkbox field="orderIsOpen" id="c_com_myshop_domain_CustomerPO_orderIsOpen" z="9Iz2YT60Vp2UbswyTus/LClg5yE="/>
         <field:input field="note" id="c_com_myshop_domain_CustomerPO_note" z="WAvkoSvR21soBBGlsrAmZMLf5vk="/>
+        <field:select field="customerId" id="c_com_myshop_domain_CustomerPO_customerId" itemValue="id" items="${customers}" path="/customers" z="m4AVMXKBARc+Rqa6fjno5aEGzsY="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_myshop_domain_CustomerPO" render="${not empty dependencies}" z="qe/OE6Js1UnM/fwi9Dur+Od+Ti8="/>
 </div>

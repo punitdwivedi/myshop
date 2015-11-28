@@ -4,6 +4,7 @@
 package com.myshop.domain;
 
 import com.myshop.domain.Address;
+import com.myshop.domain.Customer;
 import com.myshop.domain.CustomerPO;
 
 privileged aspect CustomerPO_Roo_JavaBean {
@@ -30,6 +31,14 @@ privileged aspect CustomerPO_Roo_JavaBean {
     
     public void CustomerPO.setNote(String note) {
         this.note = note;
+    }
+    
+    public Customer CustomerPO.getCustomerId() {
+        return this.customerId;
+    }
+    
+    public void CustomerPO.setCustomerId(Customer customerId) {
+        this.customerId = customerId;
     }
     
 }

@@ -30,9 +30,11 @@ public class CustomerPoDelivery {
 
     /**
      */
-    private Integer shipmentId;
+    @ManyToOne
+    private Shipment shipmentId;
 
     /**
      */
-    private Integer shipmentLineNo;
+    @ManyToOne
+    private ShipmentDetails shipmentLineNo;
 }

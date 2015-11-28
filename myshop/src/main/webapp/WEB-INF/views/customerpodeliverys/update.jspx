@@ -6,7 +6,7 @@
         <field:select field="customerPoLineNo" id="c_com_myshop_domain_CustomerPoDelivery_customerPoLineNo" itemValue="id" items="${customerpodetailses}" path="/customerpodetailses" z="MRqDNfxLkHbjfqsnKZh5Wp1qWMI="/>
         <field:datetime dateTimePattern="${customerPoDelivery_shipoutdate_date_format}" field="shipOutDate" id="c_com_myshop_domain_CustomerPoDelivery_shipOutDate" z="P2Jhb+DKPz1fovWTs0Btc3bkp3s="/>
         <field:input field="shipOutQuantity" id="c_com_myshop_domain_CustomerPoDelivery_shipOutQuantity" validationMessageCode="field_invalid_number" z="LqPcdZ91FTM5qOJU2sP8uMnyOig="/>
-        <field:input field="shipmentId" id="c_com_myshop_domain_CustomerPoDelivery_shipmentId" validationMessageCode="field_invalid_integer" z="uliZERxFZTwu4K8zVlr8jkx8Pgo="/>
-        <field:input field="shipmentLineNo" id="c_com_myshop_domain_CustomerPoDelivery_shipmentLineNo" validationMessageCode="field_invalid_integer" z="RDWws0OKwmGwn8qOHkFjYKH+t6U="/>
+        <field:select field="shipmentId" id="c_com_myshop_domain_CustomerPoDelivery_shipmentId" itemValue="id" items="${shipments}" path="/shipments" z="kFFDtxup8jwN9TJHyBda9aUlIW0="/>
+        <field:select field="shipmentLineNo" id="c_com_myshop_domain_CustomerPoDelivery_shipmentLineNo" itemValue="id" items="${shipmentdetailses}" path="/shipmentdetailses" z="kSE11RZFcNGBsaxJDpxoFLz3dRo="/>
     </form:update>
 </div>

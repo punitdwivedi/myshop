@@ -339,7 +339,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<CustomerPoDelivery, String> ApplicationConversionServiceFactoryBean.getCustomerPoDeliveryToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.myshop.domain.CustomerPoDelivery, java.lang.String>() {
             public String convert(CustomerPoDelivery customerPoDelivery) {
-                return new StringBuilder().append(customerPoDelivery.getShipOutDate()).append(' ').append(customerPoDelivery.getShipOutQuantity()).append(' ').append(customerPoDelivery.getShipmentId()).append(' ').append(customerPoDelivery.getShipmentLineNo()).toString();
+                return new StringBuilder().append(customerPoDelivery.getShipOutDate()).append(' ').append(customerPoDelivery.getShipOutQuantity()).toString();
             }
         };
     }

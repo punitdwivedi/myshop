@@ -4,6 +4,7 @@
 package com.myshop.domain;
 
 import com.myshop.domain.AddressDataOnDemand;
+import com.myshop.domain.Customer;
 import com.myshop.domain.CustomerPO;
 import com.myshop.domain.CustomerPODataOnDemand;
 import java.security.SecureRandom;
@@ -29,9 +30,15 @@ privileged aspect CustomerPODataOnDemand_Roo_DataOnDemand {
     
     public CustomerPO CustomerPODataOnDemand.getNewTransientCustomerPO(int index) {
         CustomerPO obj = new CustomerPO();
+        setCustomerId(obj, index);
         setNote(obj, index);
         setOrderIsOpen(obj, index);
         return obj;
+    }
+    
+    public void CustomerPODataOnDemand.setCustomerId(CustomerPO obj, int index) {
+        Customer customerId = null;
+        obj.setCustomerId(customerId);
     }
     
     public void CustomerPODataOnDemand.setNote(CustomerPO obj, int index) {
